@@ -1,0 +1,81 @@
+body {
+  background-color: var(--color-lightblack);
+}
+
+#nav {
+  margin: 20px;
+  padding: 10px;
+  max-width: 580px;
+  background-color: var(--color-darksig);
+  border-radius: 20px;
+}
+
+.logo {
+  background-color: var(--color-black);
+  border-radius: 20px;
+  max-width: 580px;
+  text-align: center;
+}
+.logo img {
+  vertical-align: top;
+}
+
+.gnb {
+  background-color: var(--color-black);
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.none {
+  flex-direction: column;
+  padding: 105px 0px 106px;
+  margin: 0 auto;
+  max-width: 395px;
+  line-height: 51px;
+}
+.none li {
+  font-family: var(--font-pixel);
+  font-size: 40px;
+}
+.none li:first-child {
+  color: var(--vs-y);
+}
+.none li:first-child span {
+  color: var(--vs-m);
+}
+.none li:nth-child(2) {
+  text-align: end;
+  color: var(--vs-b);
+}
+.none li:nth-child(2) span {
+  color: var(--color-white);
+}
+.none li:nth-child(2) strong {
+  color: var(--vs-r);
+}
+.none li:last-child {
+  color: var(--vs-m);
+}
+
+.game {
+  margin: 0px 40px;
+  padding-bottom: 6px;
+}
+
+.board {
+  max-width: 580px;
+  background-color: var(--color-lightblack);
+  border-radius: 20px;
+}
+
+.btn {
+  padding: 0px;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  font-family: var(--font-robo);
+  font-size: 16px;
+  border: 1px solid var(--color-sig);
+  border-radius: 10px;
+  background-color: var(--color-darksig);
+}/*# sourceMappingURL=layout.css.map */

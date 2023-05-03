@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+$inter_avg:20px;
+$inter_min:10px;
+
+body{
+  background-color: var(--color-lightblack);
+}
+
+// 내비게이션 서식
+
+#nav {
+  margin: $inter_avg;
+  padding:$inter_min;
+  max-width: 580px;
+  background-color: var(--color-darksig);
+  border-radius: $inter_avg;
+}
+
+@mixin nav_back{
+  background-color: var(--color-black);
+  border-radius: $inter_avg;
+}
+
+.logo {
+  @include nav_back;
+  max-width: 580px;
+  text-align: center;
+  img{
+    vertical-align: top;
+  }
+}
+
+.gnb{
+  @include nav_back;
+  margin-top:$inter_min;
+}
+.none{
+  flex-direction: column;
+  padding:105px 0px 106px;
+  margin:0 auto;
+  max-width:395px;
+  line-height: 51px;
+  li{
+    font-family: var(--font-pixel);
+    font-size: 40px;
+  }
+  li:first-child{
+    color:var(--vs-y);
+  span{
+    color:var(--vs-m);
+  }
+  }
+  li:nth-child(2){
+    text-align: end;
+    color:var(--vs-b);
+    span{
+      color:var(--color-white);
+    }
+    strong{
+      color:var(--vs-r);
+    }
+  }
+  li:last-child{
+    color:var(--vs-m);
+  }
+} 
+
+.game{
+  margin:0px 40px;
+  padding-bottom:6px;
+}
+
+.board{
+  max-width:580px;
+  background-color: var(--color-lightblack);
+  border-radius: $inter_avg;
+}
+
+// common 옮겨라
+.btn{
+  padding:0px;
+  width:150px;
+  height:40px;
+  line-height: 40px;
+  font-family: var(--font-robo);
+  font-size: 16px;
+  border: 1px solid var(--color-sig);
+  border-radius: $inter_min;
+  background-color: var(--color-darksig);
+}
