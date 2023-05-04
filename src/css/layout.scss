@@ -3,16 +3,17 @@
 $inter_avg:20px;
 $inter_min:10px;
 
-body{
-  background-color: var(--color-lightblack);
-}
+
 
 // 내비게이션 서식
 
-#nav {
+.nav {
+  flex-direction: column;
   margin: $inter_avg;
   padding:$inter_min;
-  max-width: 580px;
+  box-sizing: border-box;
+  max-width: 600px;
+  height:calc(100vh - 40px);
   background-color: var(--color-darksig);
   border-radius: $inter_avg;
 }
@@ -25,6 +26,8 @@ body{
 .logo {
   @include nav_back;
   max-width: 580px;
+  padding:$inter_min 0px;
+  box-sizing: border-box;
   text-align: center;
   img{
     vertical-align: top;
@@ -34,58 +37,32 @@ body{
 .gnb{
   @include nav_back;
   margin-top:$inter_min;
+  max-height:500px;
+  height:100%;
 }
-.none{
-  flex-direction: column;
-  padding:105px 0px 106px;
-  margin:0 auto;
-  max-width:395px;
-  line-height: 51px;
-  li{
-    font-family: var(--font-pixel);
-    font-size: 40px;
-  }
-  li:first-child{
-    color:var(--vs-y);
-  span{
-    color:var(--vs-m);
-  }
-  }
-  li:nth-child(2){
-    text-align: end;
-    color:var(--vs-b);
-    span{
-      color:var(--color-white);
-    }
-    strong{
-      color:var(--vs-r);
-    }
-  }
-  li:last-child{
-    color:var(--vs-m);
-  }
-} 
 
 .game{
   margin:0px 40px;
-  padding-bottom:6px;
 }
 
 .board{
   max-width:580px;
   background-color: var(--color-lightblack);
   border-radius: $inter_avg;
+  p{
+    font-family: var(--font-robo);
+    font-size: 12px;
+    text-align: center;
+    color:var(--color-lightblue);
+    padding-bottom:$inter_min;
+  }
 }
 
-// common 옮겨라
-.btn{
-  padding:0px;
-  width:150px;
-  height:40px;
-  line-height: 40px;
-  font-family: var(--font-robo);
-  font-size: 16px;
+//컨텐츠 영역
+.cont{
+  max-width:1260px;
+  width:100%;
+  margin:$inter_avg $inter_avg $inter_avg 0px;
   border: 1px solid var(--color-sig);
-  border-radius: $inter_min;
-  background-color: var(--color-darksig);
+  border-radius: $inter_avg;
 }

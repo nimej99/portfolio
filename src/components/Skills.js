@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Skills(props) {
+function Skills() {
   return (
     <div>
       

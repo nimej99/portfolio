@@ -1,11 +1,10 @@
-body {
-  background-color: var(--color-lightblack);
-}
-
-#nav {
+.nav {
+  flex-direction: column;
   margin: 20px;
   padding: 10px;
-  max-width: 580px;
+  box-sizing: border-box;
+  max-width: 600px;
+  height: calc(100vh - 40px);
   background-color: var(--color-darksig);
   border-radius: 20px;
 }
@@ -14,6 +13,8 @@ body {
   background-color: var(--color-black);
   border-radius: 20px;
   max-width: 580px;
+  padding: 10px 0px;
+  box-sizing: border-box;
   text-align: center;
 }
 .logo img {
@@ -24,42 +25,12 @@ body {
   background-color: var(--color-black);
   border-radius: 20px;
   margin-top: 10px;
-}
-
-.none {
-  flex-direction: column;
-  padding: 105px 0px 106px;
-  margin: 0 auto;
-  max-width: 395px;
-  line-height: 51px;
-}
-.none li {
-  font-family: var(--font-pixel);
-  font-size: 40px;
-}
-.none li:first-child {
-  color: var(--vs-y);
-}
-.none li:first-child span {
-  color: var(--vs-m);
-}
-.none li:nth-child(2) {
-  text-align: end;
-  color: var(--vs-b);
-}
-.none li:nth-child(2) span {
-  color: var(--color-white);
-}
-.none li:nth-child(2) strong {
-  color: var(--vs-r);
-}
-.none li:last-child {
-  color: var(--vs-m);
+  max-height: 500px;
+  height: 100%;
 }
 
 .game {
   margin: 0px 40px;
-  padding-bottom: 6px;
 }
 
 .board {
@@ -67,15 +38,18 @@ body {
   background-color: var(--color-lightblack);
   border-radius: 20px;
 }
-
-.btn {
-  padding: 0px;
-  width: 150px;
-  height: 40px;
-  line-height: 40px;
+.board p {
   font-family: var(--font-robo);
-  font-size: 16px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--color-lightblue);
+  padding-bottom: 10px;
+}
+
+.cont {
+  max-width: 1260px;
+  width: 100%;
+  margin: 20px 20px 20px 0px;
   border: 1px solid var(--color-sig);
-  border-radius: 10px;
-  background-color: var(--color-darksig);
+  border-radius: 20px;
 }/*# sourceMappingURL=layout.css.map */

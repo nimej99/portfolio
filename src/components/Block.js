@@ -1,10 +1,32 @@
 import React from 'react';
+// import { Link } from 'react-router-dom';
 
-function Block(props) {
+function Block() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <strong className='gnb_y'>
+        {/* <Link> */}
+          #NimeJ
+        {/* </Link> */}
+      </strong>
+      <ul className='depth_1'>
+        <li>
+          {/* <Link> */}
+            ABOUT
+          {/* </Link> */}
+        </li>
+        <li>
+          {/* <Link> */}
+            EXPERIENCE
+          {/* </Link> */}
+        </li>
+        <li>
+          {/* <Link> */}
+            CONTACT
+          {/* </Link> */}
+        </li>
+      </ul>
+    </>
   );
 }
 

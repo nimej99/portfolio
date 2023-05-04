@@ -40,6 +40,11 @@
 
 }
 
+body{
+  background-color: var(--color-lightblack);
+  font-family: var(--font-pixel);
+}
+
 .hidden{
   display:none;
 }

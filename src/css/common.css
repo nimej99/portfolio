@@ -1,1 +1,91 @@
-/*# sourceMappingURL=common.css.map */
+.none {
+  max-width: 395px;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.none li {
+  font-size: 40px;
+  margin: 5px 0px;
+}
+.none li:first-child {
+  color: var(--vs-y);
+}
+.none li:first-child span {
+  color: var(--vs-m);
+}
+.none li:nth-child(2) {
+  text-align: end;
+  color: var(--vs-b);
+}
+.none li:nth-child(2) span {
+  color: var(--color-white);
+}
+.none li:nth-child(2) strong {
+  color: var(--vs-r);
+}
+.none li:last-child {
+  color: var(--vs-m);
+}
+
+.gnb_y {
+  display: block;
+  padding-top: 30px;
+  color: var(--vs-y);
+  font-size: 40px;
+  text-align: center;
+}
+
+.depth_1 {
+  max-width: 395px;
+  margin: 0 auto;
+  color: var(--vs-b);
+  text-align: center;
+}
+.depth_1 li {
+  margin: 30px 0px;
+  font-size: 32px;
+}
+
+.b_text {
+  padding: 50px;
+}
+.b_text li {
+  font-family: var(--font-robo);
+  font-size: 20px;
+  color: var(--color-white);
+}
+.b_text li:nth-child(2) {
+  color: var(--color-lightblue);
+  margin: 20px 0px;
+  font-size: 24px;
+}
+
+.b_icons {
+  padding: 0px 0px 50px 50px;
+}
+.b_icons li span {
+  cursor: pointer;
+}
+.b_icons li:not(:last-child) span {
+  margin-right: 20px;
+}
+.b_icons li:last-child button {
+  margin-left: 120px;
+}
+
+.btn {
+  padding: 0px;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  font-family: var(--font-robo);
+  font-size: 16px;
+  border: 1px solid var(--color-sig);
+  border-radius: 10px;
+  background-color: var(--color-darksig);
+}/*# sourceMappingURL=common.css.map */

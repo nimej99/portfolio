@@ -8,7 +8,7 @@ import Board from './components/Board';
 function Nav() {
   return (
     <>
-      <nav id='nav'>
+      <nav className='nav flex'>
         <Logo />
         <Gnb />
         <Game />

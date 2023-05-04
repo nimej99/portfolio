@@ -1,11 +1,13 @@
 import React from 'react';
 
-import None from './None';
+// import None from './None';
+import Block from './Block';
 
 function Gnb() {
   return (
     <div className='gnb'>
-      <None />
+      {/* <None /> */}
+      <Block />
     </div>
   );
 }

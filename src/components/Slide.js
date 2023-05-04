@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Slide(props) {
+function Slide() {
   return (
     <div>
       

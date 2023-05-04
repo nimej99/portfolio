@@ -1,1 +1,99 @@
 @charset "utf-8";
+
+$inter_avg:20px;
+$inter_min:10px;
+
+// 인트로 None 서식
+.none{
+  max-width:395px;
+  width:100%;
+  height:100%;
+  padding:50px;
+  box-sizing: border-box;
+  justify-content: center;
+  flex-direction: column;
+  margin:0 auto;
+  li{
+    font-size: 40px;
+    margin:5px 0px;
+  }
+  li:first-child{
+    color:var(--vs-y);
+  span{
+    color:var(--vs-m);
+  }
+  }
+  li:nth-child(2){
+    text-align: end;
+    color:var(--vs-b);
+    span{
+      color:var(--color-white);
+    }
+    strong{
+      color:var(--vs-r);
+    }
+  }
+  li:last-child{
+    color:var(--vs-m);
+  }
+} 
+
+.gnb_y{
+  display: block;
+  padding-top:30px;
+  color:var(--vs-y);
+  font-size: 40px;
+  text-align: center;
+}
+.depth_1{
+  max-width:395px;
+  margin:0 auto;
+  color:var(--vs-b);
+  text-align: center;
+  li{
+    margin:30px 0px;
+    font-size:32px;
+  }
+}
+
+//내비게이션 보드영역 서식
+.b_text{
+  padding:50px;
+  li{
+    font-family: var(--font-robo);
+    font-size: $inter_avg;
+    color:var(--color-white);
+  }
+  li:nth-child(2){
+    color:var(--color-lightblue);
+    margin:$inter_avg 0px;
+    font-size: 24px;
+  }
+}
+.b_icons{
+  padding:0px 0px 50px 50px;
+  li{
+    span{
+      cursor: pointer;
+    }
+  }
+  li:not(:last-child) span{
+    margin-right:$inter_avg;
+  }
+  li:last-child span{
+    margin-left:120px;
+  }
+}
+
+// 버튼 공통서식
+.btn{
+  padding:0px;
+  width:150px;
+  height:40px;
+  line-height: 40px;
+  font-family: var(--font-robo);
+  font-size: 16px;
+  border: 1px solid var(--color-sig);
+  border-radius: $inter_min;
+  background-color: var(--color-darksig);
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Site(props) {
+function Site() {
   return (
     <div>
       

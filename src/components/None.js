@@ -4,10 +4,10 @@ function None() {
   return (
     <>
       <ul className='none flex'>
-        <li className='gnb_y'>
+        <li>
           #NimeJ<span>&#x007B;</span>
         </li>
-        <li className='gnb_b'>
+        <li>
           display<span>&#x003A;</span><strong>none</strong><span>&#x003B;</span>
         </li>
         <li>&#x007D;</li>
