@@ -9,7 +9,7 @@ function Block() {
           #NimeJ
         {/* </Link> */}
       </strong>
-      <ul className='depth_1'>
+      <ul className='depth_1 flex flex_center'>
         <li>
           {/* <Link> */}
             ABOUT

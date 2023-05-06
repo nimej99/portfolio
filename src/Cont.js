@@ -1,11 +1,15 @@
 import React from 'react';
 
+// import Intro from './components/Intro';
+import About from './components/About';
+
 function Cont() {
   return (
     <>
-      <div className='cont'>
-        .
-      </div>
+      <section className='cont'>
+        {/* <Intro /> */}
+        <About />
+      </section>
     </>
   );
 }

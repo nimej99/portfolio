@@ -25,8 +25,8 @@
   background-color: var(--color-black);
   border-radius: 20px;
   margin-top: 10px;
-  max-height: 500px;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .game {
@@ -34,9 +34,12 @@
 }
 
 .board {
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 580px;
   background-color: var(--color-lightblack);
   border-radius: 20px;
+  box-sizing: border-box;
 }
 .board p {
   font-family: var(--font-robo);
@@ -44,6 +47,7 @@
   text-align: center;
   color: var(--color-lightblue);
   padding-bottom: 10px;
+  box-sizing: border-box;
 }
 
 .cont {
@@ -52,4 +56,5 @@
   margin: 20px 20px 20px 0px;
   border: 1px solid var(--color-sig);
   border-radius: 20px;
+  box-sizing: border-box;
 }/*# sourceMappingURL=layout.css.map */

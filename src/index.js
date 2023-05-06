@@ -12,10 +12,12 @@ import './css/common.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div className='container flex'>
+    <header className='hidden'>&nbsp;</header>
+    <main className='container flex'>
       <Nav />
       <Cont />
-    </div>
+    </main>
+    <footer className='hidden'>&nbsp;</footer>
   </React.StrictMode>
 );
 

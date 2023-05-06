@@ -10,7 +10,8 @@
 }
 .none li {
   font-size: 40px;
-  margin: 5px 0px;
+  line-height: 50px;
+  margin: 15px 0px;
 }
 .none li:first-child {
   color: var(--vs-y);
@@ -34,25 +35,31 @@
 
 .gnb_y {
   display: block;
-  padding-top: 30px;
+  padding: 40px 0px 20px;
+  box-sizing: border-box;
   color: var(--vs-y);
   font-size: 40px;
+  line-height: 50px;
   text-align: center;
 }
 
 .depth_1 {
   max-width: 395px;
+  flex-direction: column;
   margin: 0 auto;
+  padding-bottom: 20px;
   color: var(--vs-b);
   text-align: center;
 }
 .depth_1 li {
-  margin: 30px 0px;
+  margin: 15px 0px;
   font-size: 32px;
+  line-height: 40px;
 }
 
 .b_text {
   padding: 50px;
+  box-sizing: border-box;
 }
 .b_text li {
   font-family: var(--font-robo);
@@ -62,11 +69,12 @@
 .b_text li:nth-child(2) {
   color: var(--color-lightblue);
   margin: 20px 0px;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .b_icons {
   padding: 0px 0px 50px 50px;
+  box-sizing: border-box;
 }
 .b_icons li span {
   cursor: pointer;
@@ -76,6 +84,19 @@
 }
 .b_icons li:last-child button {
   margin-left: 120px;
+}
+
+h2 {
+  color: var(--color-white);
+  font-size: 32px;
+  padding: 50px;
+  text-decoration: underline;
+}
+
+article {
+  height: 100%;
+  border-radius: 20px;
+  background-color: var(--intro-back);
 }
 
 .btn {
@@ -88,4 +109,5 @@
   border: 1px solid var(--color-sig);
   border-radius: 10px;
   background-color: var(--color-darksig);
+  box-sizing: border-box;
 }/*# sourceMappingURL=common.css.map */

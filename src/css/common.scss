@@ -15,7 +15,8 @@ $inter_min:10px;
   margin:0 auto;
   li{
     font-size: 40px;
-    margin:5px 0px;
+    line-height: 50px;
+    margin:15px 0px;
   }
   li:first-child{
     color:var(--vs-y);
@@ -40,25 +41,31 @@ $inter_min:10px;
 
 .gnb_y{
   display: block;
-  padding-top:30px;
+  padding:40px 0px 20px;
+  box-sizing: border-box;
   color:var(--vs-y);
   font-size: 40px;
+  line-height: 50px;
   text-align: center;
 }
 .depth_1{
   max-width:395px;
+  flex-direction: column;
   margin:0 auto;
+  padding-bottom:20px;
   color:var(--vs-b);
   text-align: center;
   li{
-    margin:30px 0px;
+    margin:15px 0px;
     font-size:32px;
+    line-height: 40px;
   }
 }
 
 //내비게이션 보드영역 서식
 .b_text{
   padding:50px;
+  box-sizing: border-box;
   li{
     font-family: var(--font-robo);
     font-size: $inter_avg;
@@ -67,11 +74,12 @@ $inter_min:10px;
   li:nth-child(2){
     color:var(--color-lightblue);
     margin:$inter_avg 0px;
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 .b_icons{
   padding:0px 0px 50px 50px;
+  box-sizing: border-box;
   li{
     span{
       cursor: pointer;
@@ -80,9 +88,22 @@ $inter_min:10px;
   li:not(:last-child) span{
     margin-right:$inter_avg;
   }
-  li:last-child span{
+  li:last-child button{
     margin-left:120px;
   }
+}
+
+h2{
+  color:var(--color-white);
+  font-size: 32px;
+  padding:50px;
+  text-decoration: underline;
+}
+
+article{
+  height:100%;
+  border-radius: 20px;
+  background-color: var(--intro-back);
 }
 
 // 버튼 공통서식
@@ -96,4 +117,5 @@ $inter_min:10px;
   border: 1px solid var(--color-sig);
   border-radius: $inter_min;
   background-color: var(--color-darksig);
+  box-sizing: border-box;
 }

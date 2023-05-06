@@ -1,1 +1,24 @@
 @charset "utf-8";
+
+.intro{
+  height:100%;
+  border-radius: 20px;
+  background-color: var(--intro-back);
+  flex-direction: column;
+}
+
+.intro_txt{
+  text-align: center;
+  flex-direction: column;
+  li{
+    font-family: var(--font-robo);
+    font-size: 40px;
+    line-height: 50px;
+    color:var(--color-white);
+  }
+}
+
+.intro > .btn{
+  margin-top:50px;
+  font-family: var(--font-pixel);
+}

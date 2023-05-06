@@ -1,1 +1,92 @@
 @charset "utf-8";
+
+.about_wrap{
+  margin:100px 0px 0px 50px;
+}
+
+.skills{
+  max-width:200px;
+  width:100%;
+  flex-direction: column;
+}
+
+.skill{
+  width:200px;
+  height:100px;
+  margin:10px 0px;
+  border-radius: 10px 0px 10px 0px;
+  color:var(--color-white);
+  font-family: var(--font-pixel);
+  font-size: 24px;
+  box-shadow: 0 0 0 5px var(--color-lightblue) inset;
+  background-color: var(--color-lightblack);
+  flex-direction: column;
+}
+
+// skills 토끼 영역
+.a_h3{
+  text-align: center;
+  font-size: 40px;
+  color:var(--color-white);
+  margin-bottom:50px;
+}
+
+.char{
+  margin:0px 50px 0px 100px;
+}
+
+// 스테이터스 영역
+.status{
+  max-width:414px;
+  width:100%;
+  background-color: var(--color-lightblack);
+  border-radius: 10px 0px 10px 0px;
+  box-shadow: 0 0 0 5px var(--color-lightblue) inset;
+}
+.s_top{
+  height:90px;
+  align-items: center;
+  border-bottom:1px solid var(--color-lightblue);
+  box-sizing: border-box;
+  li:first-child{
+    margin-left:20px;
+  }
+  li:nth-child(2){
+    width:100%;
+    text-align: center;
+    font-size: 32px;
+    color:var(--color-white);
+  }
+}
+.stat{
+  margin:50px 20px;
+}
+.knowledge{
+  display:block;
+  text-align:center;
+  position: relative;
+  font-family: var(--font-kor);
+  font-size: 24px;
+  color:var(--color-white);
+  img{
+    position: absolute;
+    left:120px;
+    top:-4px;
+  }
+}
+.know_wrap{
+  margin-top:20px;
+}
+.k_bar{
+  width:250px;
+  height:30px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px var(--color-lightblue) inset;
+}
+.per_string{
+  margin-left:20px;
+  font-family: var(--font-robo);
+  font-size: 24px;
+  line-height: 30px;
+  color:var(--color-white);
+}

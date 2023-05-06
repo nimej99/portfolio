@@ -10,7 +10,7 @@ function Board() {
   }
   return (
     <>
-      <div className='board'>
+      <div className='board flex'>
         <ul className='b_text'>
           <li>
             안녕하세요.
@@ -39,7 +39,7 @@ function Board() {
             </span>
           </li>
           <li>
-            <Button />
+            <Button title='Resume' />
           </li>
         </ul>
         <p>
