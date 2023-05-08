@@ -64,21 +64,21 @@ $inter_min:10px;
 
 //내비게이션 보드영역 서식
 .b_text{
-  padding:50px;
+  padding:50px 50px 30px 50px;
   box-sizing: border-box;
   li{
     font-family: var(--font-robo);
-    font-size: $inter_avg;
+    font-size: 18px;
     color:var(--color-white);
   }
   li:nth-child(2){
     color:var(--color-lightblue);
     margin:$inter_avg 0px;
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 .b_icons{
-  padding:0px 0px 50px 50px;
+  padding:0px 0px 30px 50px;
   box-sizing: border-box;
   li{
     span{

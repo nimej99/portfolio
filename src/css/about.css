@@ -1,5 +1,5 @@
 .about_wrap {
-  margin: 100px 0px 0px 50px;
+  margin: 0px 0px 0px 50px;
 }
 
 .skills {
@@ -30,11 +30,13 @@
 
 .char {
   margin: 0px 50px 0px 100px;
+  max-height: 490px;
 }
 
 .status {
   max-width: 414px;
   width: 100%;
+  max-height: 490px;
   background-color: var(--color-lightblack);
   border-radius: 10px 0px 10px 0px;
   box-shadow: 0 0 0 5px var(--color-lightblue) inset;
@@ -74,7 +76,8 @@
   top: -4px;
 }
 
-.know_wrap {
+.know_wrap,
+.like_wrap {
   margin-top: 20px;
 }
 
@@ -91,4 +94,52 @@
   font-size: 24px;
   line-height: 30px;
   color: var(--color-white);
+}
+
+.like {
+  margin-top: 20px;
+  font-family: var(--font-kor);
+  color: var(--color-white);
+  font-size: 24px;
+  text-align: center;
+  transform: translateX(-10px);
+}
+
+.s_btns {
+  margin: 50px 30px;
+  justify-content: space-between;
+}
+.s_btns button {
+  width: 150px;
+  height: 60px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-family: var(--font-pixel);
+}
+.s_btns button:first-child {
+  background-color: var(--vs-b);
+  position: relative;
+}
+.s_btns button:first-child img {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+.s_btns button:nth-child(2) {
+  background-color: var(--vs-r);
+}
+
+.about .a_eng {
+  margin: 40px 0px 30px;
+  font-size: 12px;
+  color: var(--color-lightblue);
+  text-align: center;
+}
+.about .a_kor {
+  display: block;
+  color: var(--color-white);
+  font-size: 30px;
+  font-family: var(--font-kor);
+  text-align: center;
 }/*# sourceMappingURL=about.css.map */

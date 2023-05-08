@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Site() {
+function Web() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Site() {
   );
 }
 
-export default Site;
+export default Web;

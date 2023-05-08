@@ -35,7 +35,7 @@ function About() {
     }
   ]
   return (
-    <article>
+    <article className='about'>
       <h2>
         About
       </h2>
@@ -47,6 +47,12 @@ function About() {
         </div>
         <Status status={status} />
       </div>
+      <p className='a_eng'>
+        "We blend different languages to create the optimal development environment."
+      </p>
+      <strong className='a_kor'>
+        "다양한 언어를 융합하여, 최적의 개발 환경을 조성합니다."
+      </strong>
     </article>
   );
 }

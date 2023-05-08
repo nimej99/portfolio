@@ -1,1 +1,33 @@
-/*# sourceMappingURL=contact.css.map */
+.cont_half {
+  max-width: 1260px;
+  width: 100%;
+}
+.cont_half li {
+  width: 50%;
+}
+
+.call_me {
+  flex-direction: column;
+}
+.call_me img {
+  border-radius: 50%;
+}
+.call_me li {
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-kor);
+  font-size: 24px;
+  color: var(--color-white);
+}
+.call_me li:last-child {
+  margin-top: 50px;
+}
+
+.thx {
+  margin: 40px 0px;
+}
+.thx p {
+  margin: 10px 0px;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}/*# sourceMappingURL=contact.css.map */

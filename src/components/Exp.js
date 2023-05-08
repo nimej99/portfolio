@@ -1,10 +1,15 @@
 import React from 'react';
 
-function Exp(props) {
+import Web from './Web';
+
+function Exp() {
   return (
-    <div>
-      
-    </div>
+    <article>
+      <h2>
+        Experience
+      </h2>
+      <Web />
+    </article>
   );
 }
 
