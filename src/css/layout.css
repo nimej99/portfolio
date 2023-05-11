@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .nav {
   flex-direction: column;
   margin: 20px;
