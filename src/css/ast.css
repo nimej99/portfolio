@@ -1,8 +1,8 @@
 .backg{
   overflow: hidden;
   position:absolute;
-  top:-10%;
-  right:-5%;
+  top: -6%;
+  right: -5%;
   height:500px;
   width:500px;
   border-radius:50%;
@@ -436,15 +436,4 @@
 .s6{
   top:60px;
   left:370px;
-}
-a{
-    color: white;
-    font-size: 25px;
-    font-family: "Rubik",sans-serif;
-    position:absolute;
-    right:20px ;
-    top:20px;
-    padding:8px 12px 8px 12px;
-    border:2px solid white;
-    text-decoration:none;
 }

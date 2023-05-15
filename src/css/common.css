@@ -33,9 +33,9 @@
   color: var(--vs-m);
 }
 
-.gnb_y {
+.gnb_y > a {
   display: block;
-  padding: 40px 0px 20px;
+  padding: 50px 0px 10px;
   box-sizing: border-box;
   color: var(--vs-y);
   font-size: 40px;
@@ -48,7 +48,6 @@
   flex-direction: column;
   margin: 0 auto;
   padding-bottom: 20px;
-  color: var(--vs-b);
   text-align: center;
 }
 .depth_1 li {
@@ -56,9 +55,12 @@
   font-size: 32px;
   line-height: 40px;
 }
+.depth_1 li a {
+  color: var(--vs-b);
+}
 
 .b_text {
-  padding: 50px 50px 30px 50px;
+  padding: 50px;
   box-sizing: border-box;
 }
 .b_text li {
@@ -68,12 +70,12 @@
 }
 .b_text li:nth-child(2) {
   color: var(--color-lightblue);
-  margin: 20px 0px;
+  margin: 25px 0px;
   font-size: 28px;
 }
 
 .b_icons {
-  padding: 0px 0px 30px 50px;
+  padding: 0px 0px 50px 50px;
   box-sizing: border-box;
 }
 .b_icons li span {

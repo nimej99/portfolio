@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 .intro{
+  position: relative;
   height:100%;
   border-radius: 20px;
   background-color: var(--intro-back);
@@ -21,4 +22,10 @@
 .intro > .btn{
   margin-top:50px;
   font-family: var(--font-pixel);
+}
+
+.star{
+  position: absolute;
+  top:0;
+  left:0;
 }

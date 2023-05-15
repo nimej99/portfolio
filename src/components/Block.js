@@ -1,29 +1,29 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Block() {
   return (
     <>
       <strong className='gnb_y'>
-        {/* <Link> */}
+        <Link to='/'>
           #NimeJ
-        {/* </Link> */}
+        </Link>
       </strong>
       <ul className='depth_1 flex flex_center'>
         <li>
-          {/* <Link> */}
+          <Link to='/about'>
             ABOUT
-          {/* </Link> */}
+          </Link>
         </li>
         <li>
-          {/* <Link> */}
+          <Link to='/exp'>
             EXPERIENCE
-          {/* </Link> */}
+          </Link>
         </li>
         <li>
-          {/* <Link> */}
+          <Link to='/contact'>
             CONTACT
-          {/* </Link> */}
+          </Link>
         </li>
       </ul>
     </>

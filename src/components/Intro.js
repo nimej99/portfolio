@@ -4,6 +4,7 @@ import '../css/intro.css';
 import Button from './Button';
 import Ast from './Ast';
 import Kurby from './Kurby';
+import Packman from './Packman';
 
 
 
@@ -21,7 +22,9 @@ function Intro() {
           </li>
         </ul>
         <Button title='Start' />
+        <Packman />
         <Kurby />
+        <img src={process.env.PUBLIC_URL + '/images/retro/star.png'} alt="star" width='150' height='150' className='star' />
       </article>
     </>
   );

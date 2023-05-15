@@ -1,0 +1,128 @@
+
+$yellow :#FFD70E;
+$dark : #1E1E1E;
+
+.form{
+  width:400px;
+  height:400px;
+  position:absolute;
+  bottom:-10%;
+  left:-10%;
+  border-radius:2px;
+  overflow:hidden;
+  
+  .pac__man{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:transparent;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    overflow:hidden;
+    border:none;
+    outline:none;
+
+    .mouth{
+      width:50%;
+      height:100%;
+      background:transparent;
+      position:absolute;
+      right:0;
+    }
+    
+    .mouth2{
+      @extend .mouth;
+      background:$yellow;
+      left:0;
+    }
+    
+    .mouth_up{
+      width:100%;
+      height:50%;
+      background:$yellow;
+      transform:rotate(-50deg);
+      animation: mouthUp 1s ease-in-out infinite;
+      
+      &:before{
+        content:'';
+        width:11px;
+        height:11px;
+        background:$dark;
+        position:absolute;
+        top:20px;
+        right:30px;
+        border-radius:50%;
+      }
+    }
+    
+    .mouth_down{
+      width:100%;
+      height:50%;
+      background:$yellow;
+      transform:rotate(50deg);
+      animation: mouthDown 1s ease-in-out infinite;
+      
+    }
+    
+  }
+  .food {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(0,-50%);
+	display: flex;
+	animation: food 0.4s infinite linear;
+	.dot {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: $yellow;
+		margin-right: 35px;
+	}
+}
+  
+  
+}
+
+@keyframes packMan{
+  0%,100%{
+    transform: translate(-50%,-50%) rotate(-20deg);
+  }
+  50%{
+
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+}
+
+@keyframes mouthUp{
+  0%,100%{
+    transform:rotate(-50deg);
+  }
+
+  50% {
+    transform:rotate(0);
+    
+  }
+}
+
+@keyframes mouthDown{
+  0%,100%{
+    transform:rotate(50deg);
+  }
+
+  50% {
+    transform:rotate(0);
+    
+  }
+}
+
+@keyframes food{
+  from {
+		transform: translate(0,-50%);
+	}
+	to {
+		transform: translate(-47px ,-50%);
+	}
+}
