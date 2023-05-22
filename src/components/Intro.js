@@ -3,6 +3,7 @@ import React from 'react';
 import '../css/intro.css';
 import Button from './Button';
 import Ast from './Ast';
+import Back from './Back';
 import Kurby from './Kurby';
 import Packman from './Packman';
 
@@ -12,6 +13,7 @@ function Intro() {
   return (
     <>
       <article className='intro flex flex_center'>
+        <Back />
         <Ast />
         <ul className='intro_txt flex flex_center'>
           <li>

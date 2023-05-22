@@ -68,6 +68,7 @@ body{
 
 //컨텐츠 영역
 .cont{
+  overflow: hidden;
   max-width:1260px;
   width:100%;
   margin:$inter_avg $inter_avg $inter_avg 0px;
