@@ -28,6 +28,12 @@
   --color-sig:#64FFDA;
   --color-darksig:#4FBBA2;
 
+  --color-primary: #CE723B;
+  --color-secondary: #BA5E27;
+  --color-tertiary: #A64C13;
+  --color-quaternary: #923800;
+  --color-quinary: #7E2400;
+
   --vs-y:#FFD70E;
   --vs-b:#7BDCF0;
   --vs-r:#CE723B;

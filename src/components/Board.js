@@ -16,7 +16,7 @@ function Board() {
             안녕하세요.
           </li>
           <li>
-            UI, Front, React
+            UI/UX, Front-End, React
           </li>
           <li>
             개발자 강재민입니다.

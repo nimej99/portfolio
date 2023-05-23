@@ -1,8 +1,9 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function None() {
   return (
-    <>
+    <Link to='/about'>
       <ul className='none flex'>
         <li>
           #NimeJ<span>&#x007B;</span>
@@ -12,7 +13,7 @@ function None() {
         </li>
         <li>&#x007D;</li>
       </ul>
-    </>
+    </Link>
   );
 }
 

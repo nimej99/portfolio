@@ -9,16 +9,17 @@ import './css/base.css';
 import './css/layout.css';
 import './css/common.css';
 
+
 function App(props) {
   return (
     <>
       <BrowserRouter>
-        <header className='hidden'>&nbsp;</header>
-        <main className='container flex'>
-            <Nav />
-            <Cont />
-        </main>
-        <footer className='hidden'>&nbsp;</footer>
+          <header className='hidden'>&nbsp;</header>
+          <main className='container flex'>
+              <Nav />
+              <Cont />
+          </main>
+          <footer className='hidden'>&nbsp;</footer>
       </BrowserRouter>
     </>
   );

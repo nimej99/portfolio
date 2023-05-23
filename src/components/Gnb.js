@@ -1,13 +1,15 @@
 import React from 'react';
+import {useLocation} from 'react-router-dom';
 
-// import None from './None';
+import None from './None';
 import Block from './Block';
 
 function Gnb() {
+  const location = useLocation();
+  console.log(location.pathname);
   return (
     <div className='gnb'>
-      {/* <None /> */}
-      <Block />
+      {location.pathname === '/' ? <None /> : <Block />}
     </div>
   );
 }

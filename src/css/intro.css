@@ -17,9 +17,13 @@
   color: var(--color-white);
 }
 
-.intro > .btn {
-  margin-top: 50px;
+.intro > a > .btn {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: var(--font-pixel);
+  cursor: pointer;
 }
 
 .star {
