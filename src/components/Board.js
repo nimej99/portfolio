@@ -15,8 +15,11 @@ function Board() {
           <li>
             안녕하세요.
           </li>
-          <li>
-            UI/UX, Front-End, React
+          <li className='flex'>
+            <strong className='board_title'>Front-End</strong> 
+            <strong className='board_desc'> 
+              <span>UI/UX Web/App</span>
+            </strong>
           </li>
           <li>
             개발자 강재민입니다.

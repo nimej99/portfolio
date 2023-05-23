@@ -208,8 +208,47 @@ $inter_min:10px;
     color:var(--color-lightblue);
     margin:25px 0px;
     font-size: 28px;
+    strong{
+      display:inline-block;
+      overflow:hidden;
+      white-space:nowrap;
+    }
+    .board_title{
+      animation: showup 7s infinite;
+    }
+    .board_desc{
+      width:0px;
+      animation: reveal 7s infinite;
+      span{
+        margin-left:-300px;
+        animation: slidein 7s infinite;
+      }
+    }
   }
 }
+
+@keyframes showup {
+  0% {opacity:0;}
+  20% {opacity:1;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
+
+@keyframes slidein {
+  0% { margin-left:-800px; }
+  20% { margin-left:-800px; }
+  35% { margin-left:20px; }
+  100% { margin-left:20px; }
+}
+
+@keyframes reveal {
+  0% {opacity:0;width:0px;}
+  20% {opacity:1;width:0px;}
+  30% {width:300px;}
+  80% {opacity:1;}
+  100% {opacity:0;width:300px;}
+}
+
 .b_icons{
   padding: 0px 50px 30px 50px;
   box-sizing: border-box;
