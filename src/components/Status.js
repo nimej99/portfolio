@@ -4,7 +4,7 @@ import Knowledge from './Knowledge';
 
 function Status(props) {
 
-  let l_per = props.status[0].like + '%';
+  let l_per = props.status[props.myStat].like + '%';
   let l_progress = {
     width:l_per,
     height:'100%',
@@ -14,31 +14,26 @@ function Status(props) {
 
   return (
     <div className='status'>
-      <ul className='s_top flex'>
-        <li>
-          <img src={process.env.PUBLIC_URL + '/images/common/logo.svg'} alt="logo" width="43.9" height='50' />
-        </li>
-        <li>
-          {props.status[0].title}
-        </li>
-      </ul>
+      <strong className='s_top flex flex_center'>
+        {props.status[props.myStat].title}
+      </strong>
       <div className='stat'>
         <strong className='knowledge'>
           <img src={process.env.PUBLIC_URL + '/images/retro/pencil.png'} alt="pencil" width='50' height='33' />
           이해도
         </strong>
-        <Knowledge knowledge={props.status[0].knowledge}/>
+        <Knowledge knowledge={props.status[props.myStat].knowledge}/>
         <p className='like'>
         <img src={process.env.PUBLIC_URL + '/images/retro/heart.png'} alt="pencil" width='24' height='20' />
         선호도
         </p>
 
-        <div className='like_wrap flex flex_center'>
+        <div className='like_wrap flex'>
           <div className='k_bar'>
             <div style={l_progress}>&nbsp;</div>
           </div>
           <span className='per_string'>
-            {props.status[0].like}%
+            {props.status[props.myStat].like}%
           </span>
         </div>
         

@@ -164,12 +164,11 @@
   box-sizing: border-box;
 }
 .b_text li {
-  font-family: '맑은 고딕';
+  font-family: var(--font-robo);
   font-size: 18px;
   color: var(--color-white);
 }
 .b_text li:nth-child(2) {
-  font-family: var(--font-robo);
   color: var(--color-lightblue);
   margin: 25px 0px;
   font-size: 28px;

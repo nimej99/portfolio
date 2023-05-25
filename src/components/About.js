@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import '../css/about.css';
 
@@ -7,6 +7,7 @@ import Status from './Status';
 
 
 function About() {
+  const [myStat, setMyStat] = useState(0);
   const status = [
     {
       title:'HTML5',
@@ -19,7 +20,7 @@ function About() {
       like:'100'
     },
     {
-      title:'JAVASCRIPT, JQUERY',
+      title:'JS, JQUERY',
       knowledge:'60',
       like:'80'
     },
@@ -40,12 +41,12 @@ function About() {
         About
       </h2>
       <div className='about_wrap flex'>
-        <Skills status={status} />
+        <Skills status={status} setMyStat={setMyStat} />
         <div className='char'>
           <h3 className='a_h3'>SKILLS</h3>
           <img src={process.env.PUBLIC_URL + '/images/photos/404.png'} alt="char" width='400' height='400' />
         </div>
-        <Status status={status} />
+        <Status status={status} myStat={myStat} />
       </div>
       <p className='a_eng'>
         "We blend different languages to create the optimal development environment."

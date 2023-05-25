@@ -44,16 +44,8 @@
 
 .s_top {
   height: 90px;
-  align-items: center;
   border-bottom: 1px solid var(--color-lightblue);
   box-sizing: border-box;
-}
-.s_top li:first-child {
-  margin-left: 20px;
-}
-.s_top li:nth-child(2) {
-  width: 100%;
-  text-align: center;
   font-size: 32px;
   color: var(--color-white);
 }
@@ -79,6 +71,8 @@
 .know_wrap,
 .like_wrap {
   margin-top: 20px;
+  margin-left: 30px;
+  align-items: center;
 }
 
 .k_bar {
