@@ -7,8 +7,7 @@
   width: 100%;
   flex-direction: column;
 }
-
-.skill {
+.skills li button {
   width: 200px;
   height: 100px;
   margin: 10px 0px;
@@ -19,6 +18,9 @@
   box-shadow: 0 0 0 5px var(--color-lightblue) inset;
   background-color: var(--color-lightblack);
   flex-direction: column;
+}
+.skills li button.active {
+  box-shadow: 0 0 0 5px var(--vs-y) inset;
 }
 
 .a_h3 {

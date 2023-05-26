@@ -3,13 +3,29 @@ import React from 'react';
 import Knowledge from './Knowledge';
 
 function Status(props) {
-
-  let l_per = props.status[props.myStat].like + '%';
+  console.log(props.love);
+  let l_per = props.love + '%';
   let l_progress = {
     width:l_per,
     height:'100%',
     borderRadius:'5px',
     backgroundColor:'#FFD70E'
+  }
+
+  const loveUp = () => {
+    if(props.love >= 100){
+      props.setLove(100);
+    }else{
+      props.setLove(parseInt(props.love, 10) + 1);
+    }
+  }
+
+  const loveDown = () => {
+    if(props.love <= 1){
+      props.setLove(1);
+    }else{
+      props.setLove(props.love - 1);
+    }
   }
 
   return (
@@ -33,16 +49,16 @@ function Status(props) {
             <div style={l_progress}>&nbsp;</div>
           </div>
           <span className='per_string'>
-            {props.status[props.myStat].like}%
+            {props.love}%
           </span>
         </div>
         
         <div className='s_btns flex'>
-          <button>
+          <button onClick={loveUp}>
             <img src={process.env.PUBLIC_URL + '/images/retro/heart.png'} alt="heart" />
             UP
           </button>
-          <button>
+          <button onClick={loveDown}>
             DOWN
           </button>
         </div>

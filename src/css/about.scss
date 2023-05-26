@@ -8,19 +8,23 @@
   max-width:200px;
   width:100%;
   flex-direction: column;
-}
-
-.skill{
-  width:200px;
-  height:100px;
-  margin:10px 0px;
-  border-radius: 10px 0px 10px 0px;
-  color:var(--color-white);
-  font-family: var(--font-pixel);
-  font-size: 24px;
-  box-shadow: 0 0 0 5px var(--color-lightblue) inset;
-  background-color: var(--color-lightblack);
-  flex-direction: column;
+  li{
+    button{
+      width:200px;
+      height:100px;
+      margin:10px 0px;
+      border-radius: 10px 0px 10px 0px;
+      color:var(--color-white);
+      font-family: var(--font-pixel);
+      font-size: 24px;
+      box-shadow: 0 0 0 5px var(--color-lightblue) inset;
+      background-color: var(--color-lightblack);
+      flex-direction: column;
+    }
+    button.active{
+      box-shadow: 0 0 0 5px var(--vs-y) inset;
+    }
+  }
 }
 
 // skills 토끼 영역
