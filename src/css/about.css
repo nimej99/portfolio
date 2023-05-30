@@ -22,6 +22,9 @@
 .skills li button.active {
   box-shadow: 0 0 0 1px var(--vs-y) inset;
 }
+.skills li button:active {
+  transform: translate(2px, 1px);
+}
 
 .a_h3 {
   text-align: center;
@@ -124,6 +127,9 @@
 }
 .s_btns button:nth-child(2) {
   background-color: var(--vs-r);
+}
+.s_btns button:active {
+  transform: translate(2px, 1px);
 }
 
 .about .a_eng {

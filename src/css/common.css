@@ -151,11 +151,11 @@
 .depth_1 li a {
   color: var(--vs-b);
 }
-.depth_1 li a:active {
-  transform: translateY(2px, 1px);
-}
 .depth_1 li a.active {
   color: var(--vs-r);
+}
+.depth_1 li:active {
+  transform: translate(2px, 1px);
 }
 
 .b_text {
@@ -163,7 +163,7 @@
   box-sizing: border-box;
 }
 .b_text li {
-  font-family: var(--font-robo);
+  font-family: var(--font-D2);
   font-size: 18px;
   color: var(--color-white);
 }

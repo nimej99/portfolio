@@ -24,6 +24,9 @@
     button.active{
       box-shadow: 0 0 0 1px var(--vs-y) inset;
     }
+    button:active{
+      transform: translate(2px, 1px);
+    }
   }
 }
 
@@ -122,6 +125,9 @@
   }
   button:nth-child(2){
     background-color: var(--vs-r);
+  }
+  button:active{
+    transform: translate(2px, 1px);
   }
 }
 

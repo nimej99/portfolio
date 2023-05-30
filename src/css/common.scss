@@ -185,12 +185,12 @@ $inter_min:10px;
     a{
       color:var(--vs-b);
     }
-    a:active{
-      transform: translateY(2px, 1px);
-    }
     a.active{
       color:var(--vs-r);
     }
+  }
+  li:active{
+    transform: translate(2px, 1px);
   }
 }
 
@@ -199,7 +199,7 @@ $inter_min:10px;
   padding:50px 50px 50px 50px;
   box-sizing: border-box;
   li{
-    font-family: var(--font-robo);
+    font-family: var(--font-D2);
     font-size: 18px;
     color:var(--color-white);
   }
