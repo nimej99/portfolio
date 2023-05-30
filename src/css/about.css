@@ -15,12 +15,12 @@
   color: var(--color-white);
   font-family: var(--font-pixel);
   font-size: 24px;
-  box-shadow: 0 0 0 5px var(--color-lightblue) inset;
+  box-shadow: 0 0 0 1px var(--color-lightblue) inset;
   background-color: var(--color-lightblack);
   flex-direction: column;
 }
 .skills li button.active {
-  box-shadow: 0 0 0 5px var(--vs-y) inset;
+  box-shadow: 0 0 0 1px var(--vs-y) inset;
 }
 
 .a_h3 {
@@ -41,7 +41,7 @@
   max-height: 490px;
   background-color: var(--color-lightblack);
   border-radius: 10px 0px 10px 0px;
-  box-shadow: 0 0 0 5px var(--color-lightblue) inset;
+  box-shadow: 0 0 0 1px var(--color-lightblue) inset;
 }
 
 .s_top {
@@ -138,4 +138,20 @@
   font-size: 30px;
   font-family: var(--font-kor);
   text-align: center;
+}
+
+.hundred {
+  animation: pang 1s infinite;
+}
+
+@keyframes pang {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-55%);
+  }
+  100% {
+    transform: translateY(-45%);
+  }
 }/*# sourceMappingURL=about.css.map */

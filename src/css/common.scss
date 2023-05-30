@@ -167,17 +167,16 @@ $inter_min:10px;
 
 .gnb_y > a{
   display: block;
-  padding:30px 0px 10px;
   box-sizing: border-box;
   color:var(--vs-y);
   font-size: 40px;
-  line-height: 40px;
+  line-height: 50px;
   text-align: center;
 }
 .depth_1{
   max-width:395px;
   flex-direction: column;
-  margin:0 auto;
+  margin:20px auto;
   text-align: center;
   li{
     margin:15px 0px;

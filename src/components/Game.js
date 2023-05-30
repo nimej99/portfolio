@@ -16,7 +16,7 @@ function Game() {
     width: '200px',
     height: '200px',
     marginRight: '100px',
-    transition:'0.3s'
+    transition:'0.5s'
   };
 
   let control2 = {
@@ -25,7 +25,7 @@ function Game() {
     height: '200px',
     marginRight: '100px',
     backgroundImage: `url(${process.env.PUBLIC_URL + conHov })`,
-    transition:'0.3s'
+    transition:'0.5s'
   };
 
   let joyStick = {
@@ -33,7 +33,7 @@ function Game() {
     backgroundRepeat: 'no-repeat',
     width: '200px',
     height: '200px',
-    transition:'0.3s'
+    transition:'0.5s'
   };
 
   
@@ -42,7 +42,7 @@ function Game() {
     backgroundRepeat: 'no-repeat',
     width: '200px',
     height: '200px',
-    transition:'0.3s'
+    transition:'0.5s'
   };
 
   return (

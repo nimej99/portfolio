@@ -1,5 +1,6 @@
 import React from 'react';
 
+import '../css/exp.css';
 import Web from './Web';
 
 function Exp() {
