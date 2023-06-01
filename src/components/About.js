@@ -14,27 +14,27 @@ function About() {
     {
       title:'HTML5',
       knowledge:'85',
-      like:'95'
+      like:95
     },
     {
       title:'CSS3',
       knowledge:'90',
-      like:'100'
+      like:100
     },
     {
       title:'JS, JQUERY',
       knowledge:'60',
-      like:'80'
+      like:80
     },
     {
       title:'React.js',
       knowledge:'60',
-      like:'100'
+      like:100
     },
     {
       title:'PHP, SQL',
       knowledge:'50',
-      like:'70'
+      like:70
     }
   ]
   
@@ -43,27 +43,27 @@ function About() {
       {
         title:'HTML5',
         knowledge:'85',
-        like:'95'
+        like:95
       },
       {
         title:'CSS3',
         knowledge:'90',
-        like:'100'
+        like:100
       },
       {
         title:'JS, JQUERY',
         knowledge:'60',
-        like:'80'
+        like:80
       },
       {
         title:'React.js',
         knowledge:'60',
-        like:'100'
+        like:100
       },
       {
         title:'PHP, SQL',
         knowledge:'50',
-        like:'70'
+        like:70
       }
     ]
     setLove(status[myStat].like);

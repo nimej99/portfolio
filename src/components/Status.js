@@ -91,7 +91,7 @@ function Status(props) {
         
         <div className='s_btns flex'>
           <button onClick={loveUp}>
-            <img src={process.env.PUBLIC_URL + '/images/retro/heart.png'} alt="heart" className={props.love === '100' ? 'hundred' : ''} />
+            <img src={process.env.PUBLIC_URL + '/images/retro/heart.png'} alt="heart" className={props.love === 100 ? 'hundred' : ''} />
             UP
           </button>
           <button onClick={loveDown}>

@@ -2,8 +2,18 @@ import React from 'react';
 
 import '../css/contact.css';
 import Button from './Button';
+import Globe from "react-globe.gl";
 
 function Contact() {
+  const globeEl = React.useRef();
+
+  React.useEffect(() => {
+    // Auto-rotate
+    globeEl.current.controls().autoRotate = true;
+    globeEl.current.controls().autoRotateSpeed = 0.3;
+
+  }, []);
+
   return (
     <article>
       <h2>
@@ -11,7 +21,14 @@ function Contact() {
       </h2>
       <ul className='cont_half flex'>
         <li>
-          {/* three.js */}
+          <Globe
+            ref={globeEl}
+            globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
+            bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+            backgroundColor='#0F111D'
+            width='500'
+            height='500'
+          />
         </li>
         <li>
           <ul className='call_me flex'>

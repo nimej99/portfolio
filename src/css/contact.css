@@ -5,6 +5,11 @@
 .cont_half li {
   width: 50%;
 }
+.cont_half li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .call_me {
   flex-direction: column;

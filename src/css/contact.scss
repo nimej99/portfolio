@@ -5,6 +5,11 @@
   width:100%;
   li{
     width:50%;
+    div{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 .call_me{
