@@ -11,7 +11,7 @@
 .none li {
   font-size: 40px;
   line-height: 40px;
-  margin: 10px 0px;
+  margin: 15px 20px;
 }
 .none li:first-child {
   color: var(--vs-y);
@@ -20,7 +20,10 @@
   color: var(--vs-m);
 }
 .none li:nth-child(2) {
+  font-size: 36px;
+  text-indent: 20px;
   text-align: end;
+  letter-spacing: 2px;
   color: var(--vs-b);
 }
 .none li:nth-child(2) span {
@@ -129,6 +132,7 @@
   }
 }
 .gnb_y > a {
+  margin-top: 10px;
   display: block;
   box-sizing: border-box;
   color: var(--vs-y);
@@ -159,7 +163,7 @@
 }
 
 .b_text {
-  padding: 50px 50px 50px 50px;
+  padding: 50px 30px;
   box-sizing: border-box;
 }
 .b_text li {
@@ -238,17 +242,20 @@
   }
 }
 .b_icons {
-  padding: 0px 50px 30px 50px;
+  padding: 0px 30px 30px;
   box-sizing: border-box;
+  gap: 20px;
+}
+.b_icons li {
+  text-align: left;
+  width: 15%;
 }
 .b_icons li span {
   cursor: pointer;
 }
-.b_icons li:not(:last-child) span {
-  margin-right: 20px;
-}
-.b_icons li:last-child button {
-  margin-left: 120px;
+.b_icons li:last-child {
+  text-align: end;
+  width: 55%;
 }
 
 h2 {

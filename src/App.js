@@ -15,7 +15,7 @@ function App(props) {
     <>
       <BrowserRouter>
           <header className='hidden'>&nbsp;</header>
-          <main className='container flex'>
+          <main>
               <Nav />
               <Cont />
           </main>

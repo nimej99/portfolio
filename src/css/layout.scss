@@ -1,5 +1,19 @@
 @charset "utf-8";
 
+$tablet: 1319px;
+$desktop: 1320px;
+
+@mixin tablet{
+  @media (max-width: $tablet){
+    @content;
+  }
+}
+@mixin desktop{
+  @media (min-width: $desktop){
+    @content;
+  }
+}
+
 $inter_avg:20px;
 $inter_min:10px;
 
@@ -8,6 +22,12 @@ body{
   overflow: hidden;
 }
 
+main{
+  display: flex;
+  @include tablet{
+    flex-direction: column;
+  }
+}
 // 내비게이션 서식
 
 .nav {
@@ -16,6 +36,8 @@ body{
   padding:$inter_min;
   box-sizing: border-box;
   max-width: 600px;
+  min-width: 400px;
+  width:25%;
   height:calc(100vh - 40px);
   background-color: var(--color-darksig);
   border-radius: $inter_avg;
@@ -41,20 +63,21 @@ body{
   @include nav_back;
   margin-top:$inter_min;
   height:100%;
-  padding:50px 0px;
   box-sizing: border-box;
+  flex-direction: column;
 }
 
 .game{
-  margin:0px 40px;
-  margin-bottom:20px;
+  width:100%;
+  max-height:200px;
+  justify-content: space-around;
   li{
-    width: 200px;
-    height: 200px;
+    max-width:200px;
+    width:45%;
+    max-height: 200px;
+    padding-bottom:45%;
     transition: 0.5s;
-  }
-  li:first-child{
-    margin-right:100px;
+    background-size:contain;
   }
 }
 
@@ -62,6 +85,7 @@ body{
   flex-direction: column;
   justify-content: space-between;
   max-width:580px;
+  min-height:320px;
   background-color: var(--color-lightblack);
   border-radius: $inter_avg;
   box-sizing: border-box;
@@ -78,8 +102,8 @@ body{
 //컨텐츠 영역
 .cont{
   overflow: hidden;
-  max-width:1260px;
-  width:100%;
+  max-width:2440px;
+  width:75%;
   margin:$inter_avg $inter_avg $inter_avg 0px;
   border: 1px solid var(--color-sig);
   border-radius: $inter_avg;

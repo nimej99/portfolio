@@ -16,7 +16,7 @@ $inter_min:10px;
   li{
     font-size: 40px;
     line-height: 40px;
-    margin:10px 0px;
+    margin:15px 20px;
   }
   li:first-child{
     color:var(--vs-y);
@@ -25,7 +25,10 @@ $inter_min:10px;
   }
   }
   li:nth-child(2){
+    font-size: 36px;
+    text-indent: 20px;
     text-align: end;
+    letter-spacing: 2px;
     color:var(--vs-b);
     span{
       color:var(--color-white);
@@ -166,6 +169,7 @@ $inter_min:10px;
 }
 
 .gnb_y > a{
+  margin-top:10px;
   display: block;
   box-sizing: border-box;
   color:var(--vs-y);
@@ -196,7 +200,7 @@ $inter_min:10px;
 
 //내비게이션 보드영역 서식
 .b_text{
-  padding:50px 50px 50px 50px;
+  padding:50px 30px;
   box-sizing: border-box;
   li{
     font-family: var(--font-D2);
@@ -249,18 +253,19 @@ $inter_min:10px;
 }
 
 .b_icons{
-  padding: 0px 50px 30px 50px;
+  padding: 0px 30px 30px;
   box-sizing: border-box;
+  gap:20px;
   li{
+    text-align: left;
+    width:15%;
     span{
       cursor: pointer;
     }
   }
-  li:not(:last-child) span{
-    margin-right:$inter_avg;
-  }
-  li:last-child button{
-    margin-left:120px;
+  li:last-child{
+    text-align:end;
+    width:55%;
   }
 }
 
