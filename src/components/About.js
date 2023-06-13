@@ -52,8 +52,8 @@ function About() {
       },
       {
         title:'JS, JQUERY',
-        knowledge:'60',
-        like:80
+        knowledge:'65',
+        like:90
       },
       {
         title:'React.js',

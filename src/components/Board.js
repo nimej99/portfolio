@@ -1,4 +1,6 @@
 import React from 'react';
+import {useLocation} from 'react-router-dom';
+import { useTypingText } from "./useTypingText";
 
 import Button from './Button';
 
@@ -8,6 +10,16 @@ function Board() {
     codepen : 'https://codepen.io/nimej99',
     instagram : 'https://www.instagram.com/invites/contact/?i=1x6hm153b9t14&utm_content=o0u94i'
   }
+
+  const { word } = useTypingText(
+    ["Front-End", "UI/UX", "Web/App"],
+    130,
+    20
+  );
+
+  const locations = useLocation();
+  const FrontEnd = 'Front-End';
+
   return (
     <>
       <div className='board flex'>
@@ -15,11 +27,8 @@ function Board() {
           <li>
             안녕하세요.
           </li>
-          <li className='flex'>
-            <strong className='board_title'>Front-End</strong> 
-            <strong className='board_desc'> 
-              <span>UI/UX Web/App</span>
-            </strong>
+          <li className='word'>
+            {locations.pathname === '/' ? FrontEnd : word}
           </li>
           <li>
             개발자 강재민입니다.

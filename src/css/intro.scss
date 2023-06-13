@@ -1,8 +1,31 @@
 @charset "utf-8";
 
+$tablet: 1319px;
+$desktop: 1320px;
+$nav:1650px;
+
+@mixin tablet{
+  @media (max-width: $tablet){
+    @content;
+  }
+}
+@mixin desktop{
+  @media (min-width: $desktop){
+    @content;
+  }
+}
+@mixin nav{
+  @media (max-width: $nav){
+    @content;
+  }
+}
+
 .intro{
   position: relative;
   height:100%;
+  @include tablet{
+    height:calc(100vh - 170px);
+  }
   border-radius: 20px;
   background-color: var(--intro-back);
   flex-direction: column;
@@ -13,7 +36,7 @@
   flex-direction: column;
   li{
     font-family: var(--font-robo);
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 50px;
     color:var(--color-white);
   }

@@ -82,7 +82,7 @@ function Status(props) {
 
         <div className='like_wrap flex'>
           <div className='k_bar'>
-            <div style={l_progress}>&nbsp;</div>
+            <div style={l_progress} className='l_move_bar'>&nbsp;</div>
           </div>
           <span className='per_string'>
             {props.love}%

@@ -2,7 +2,7 @@
 
 .web{
   max-width:100%;
-  margin:0px 50px 50px;
+  margin:0px 50px;
   background-color: var(--port-back);
   .swiper-button-next, .swiper-button-prev{
     color:var(--color-lightblack);
@@ -20,12 +20,12 @@
     }
     line-height: 50px;
     color:var(--color-white);
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 .works{
   max-width:100%;
-  padding:50px;
+  padding:10px;
 }
 .work{
   position: relative;
@@ -43,6 +43,11 @@
     border:1px solid var(--color-white);
     color:var(--color-white);
   }
+  .btn:hover{
+    background-color: var(--color-white);
+    color:var(--color-black);
+    font-weight: bold;
+  }
 }
 
 .work_desc{
@@ -57,10 +62,10 @@
   left:0;
   bottom:0;
   li{
-    font-size: 16px;
+    font-size: 1rem;
   }
   li:first-child{
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom:24px;
   }
   li:nth-child(2){

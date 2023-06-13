@@ -11,7 +11,7 @@ function Knowledge(props) {
   return (
     <div className='know_wrap flex'>
       <div className='k_bar'>
-        <div style={k_progress}>&nbsp;</div>
+        <div style={k_progress} className='k_move_bar'>&nbsp;</div>
       </div>
       <span className='per_string'>
         {props.knowledge}%

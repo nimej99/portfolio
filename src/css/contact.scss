@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .cont_half{
-  max-width:1260px;
+  max-width:2560px;
   width:100%;
   li{
     width:50%;
@@ -21,7 +21,7 @@
     width:100%;
     text-align: center;
     font-family: var(--font-kor);
-    font-size:24px;
+    font-size:1.5rem;
     color:var(--color-white);
   }
   li:last-child{

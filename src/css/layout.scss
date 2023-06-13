@@ -24,8 +24,10 @@ body{
 
 main{
   display: flex;
+  height:100vh;
   @include tablet{
     flex-direction: column;
+    padding:10px 20px 20px;
   }
 }
 // 내비게이션 서식
@@ -41,6 +43,9 @@ main{
   height:calc(100vh - 40px);
   background-color: var(--color-darksig);
   border-radius: $inter_avg;
+  @include tablet{
+    display: none;
+  }
 }
 
 @mixin nav_back{
@@ -91,7 +96,7 @@ main{
   box-sizing: border-box;
   p{
     font-family: var(--font-robo);
-    font-size: 12px;
+    font-size: 0.75rem;
     text-align: center;
     color:var(--color-lightblue);
     padding-bottom:$inter_min;
@@ -102,10 +107,14 @@ main{
 //컨텐츠 영역
 .cont{
   overflow: hidden;
-  max-width:2440px;
+  max-width:2560px;
   width:75%;
   margin:$inter_avg $inter_avg $inter_avg 0px;
   border: 1px solid var(--color-sig);
   border-radius: $inter_avg;
   box-sizing: border-box;
+  @include tablet{
+    width:100%;
+    margin:0px;
+  }
 }

@@ -1,5 +1,25 @@
 @charset "utf-8";
 
+$tablet: 1319px;
+$desktop: 1320px;
+$nav:1650px;
+
+@mixin tablet{
+  @media (max-width: $tablet){
+    @content;
+  }
+}
+@mixin desktop{
+  @media (min-width: $desktop){
+    @content;
+  }
+}
+@mixin nav{
+  @media (max-width: $nav){
+    @content;
+  }
+}
+
 $inter_avg:20px;
 $inter_min:10px;
 
@@ -14,7 +34,11 @@ $inter_min:10px;
   margin:0 auto;
   animation: flicker 3s infinite;
   li{
-    font-size: 40px;
+    font-size: 2.5rem;
+    @include nav{
+      font-size: 2rem;
+      line-height: 32px;
+    }
     line-height: 40px;
     margin:15px 20px;
   }
@@ -25,7 +49,10 @@ $inter_min:10px;
   }
   }
   li:nth-child(2){
-    font-size: 36px;
+    font-size: 2.25rem;
+    @include nav{
+      font-size: 1.75rem;
+    }
     text-indent: 20px;
     text-align: end;
     letter-spacing: 2px;
@@ -173,7 +200,10 @@ $inter_min:10px;
   display: block;
   box-sizing: border-box;
   color:var(--vs-y);
-  font-size: 40px;
+  font-size: 2.5rem;
+  @include nav{
+    font-size: 2.25rem;
+  }
   line-height: 50px;
   text-align: center;
 }
@@ -184,7 +214,11 @@ $inter_min:10px;
   text-align: center;
   li{
     margin:15px 0px;
-    font-size:32px;
+    font-size:2rem;
+    @include nav{
+      font-size: 1.75rem;
+      line-height: 32px;
+    }
     line-height: 40px;
     a{
       color:var(--vs-b);
@@ -204,80 +238,81 @@ $inter_min:10px;
   box-sizing: border-box;
   li{
     font-family: var(--font-D2);
-    font-size: 18px;
+    font-size: 1.125rem;
+    @include nav{
+      font-size: 1rem;
+    }
     color:var(--color-white);
   }
   li:nth-child(2){
     color:var(--color-lightblue);
     margin:25px 0px;
-    font-size: 28px;
-    strong{
-      display:inline-block;
-      overflow:hidden;
-      white-space:nowrap;
-    }
-    .board_title{
-      animation: showup 7s infinite;
-    }
-    .board_desc{
-      width:0px;
-      animation: reveal 7s infinite;
-      span{
-        margin-left:-300px;
-        animation: slidein 7s infinite;
-      }
+    font-size: 1.75rem;
+    @include nav{
+      font-size: 1.5rem;
     }
   }
 }
-
-@keyframes showup {
-  0% {opacity:0;}
-  20% {opacity:1;}
-  80% {opacity:1;}
-  100% {opacity:0;}
-}
-
-@keyframes slidein {
-  0% { margin-left:-800px; }
-  20% { margin-left:-800px; }
-  35% { margin-left:20px; }
-  100% { margin-left:20px; }
-}
-
-@keyframes reveal {
-  0% {opacity:0;width:0px;}
-  20% {opacity:1;width:0px;}
-  30% {width:300px;}
-  80% {opacity:1;}
-  100% {opacity:0;width:300px;}
+.word.empty {
+  visibility: hidden;
 }
 
 .b_icons{
+  align-items: center;
   padding: 0px 30px 30px;
   box-sizing: border-box;
   gap:20px;
   li{
     text-align: left;
     width:15%;
+    @include nav{
+      width:10%;
+    }
     span{
       cursor: pointer;
+      img{
+        @include nav{
+          width: 30px;
+          height: 30px;
+        }
+      }
     }
   }
   li:last-child{
     text-align:end;
     width:55%;
+    @include nav{
+      width: 70%;
+    }
+  }
+}
+
+header{
+  display: none;
+  height:90px;
+  background-color: var(--color-black);
+  border:1px solid var(--color-sig);
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin:10px 20px 0px;
+  @include tablet{
+    display: block;
   }
 }
 
 h2{
   color:var(--color-white);
-  font-size: 32px;
+  font-size: 2rem;
   padding:50px;
   text-decoration: underline;
 }
 
 article{
-  height:100%;
+  height:calc(100vh - 40px);
+  @include tablet{
+    height:calc(100vh - 170px);
+  }
+  padding-bottom:50px;
   border-radius: 20px;
   background-color: var(--intro-back);
 }
@@ -287,13 +322,16 @@ article{
   padding:0px;
   width:150px;
   height:40px;
-  line-height: 40px;
   font-family: var(--font-robo);
-  font-size: 16px;
-  border: 1px solid var(--color-sig);
+  font-size: 1rem;
+  box-shadow: 0 0 1px var(--color-sig) inset;
   border-radius: $inter_min;
   background-color: var(--color-darksig);
   box-sizing: border-box;
+  cursor: pointer;
+}
+.btn:hover{
+  color:var(--color-white);
 }
 .btn:active{
   transform: translate(2px, 1px);

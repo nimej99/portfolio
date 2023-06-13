@@ -24,14 +24,14 @@ function Web() {
     },
     {
       thumb:'lush.png',
-      title:'RUSH WEB PROJECT',
+      title:'HANA WEB PROJECT',
       term:'2023.12 ~ 2024.01',
       desc:'VS Code HTML CSS JavaScript',
       href:'https://www.instagram.com/invites/contact/?i=1x6hm153b9t14&utm_content=o0u94i'
     },
     {
       thumb:'lush.png',
-      title:'RUSH WEB PROJECT',
+      title:'OFD STUDIO MOBILE WEB PROJECT',
       term:'2023.12 ~ 2024.01',
       desc:'VS Code HTML CSS JavaScript',
       href:'https://www.instagram.com/invites/contact/?i=1x6hm153b9t14&utm_content=o0u94i'

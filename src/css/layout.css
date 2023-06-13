@@ -4,10 +4,12 @@ body {
 
 main {
   display: flex;
+  height: 100vh;
 }
 @media (max-width: 1319px) {
   main {
     flex-direction: column;
+    padding: 10px 20px 20px;
   }
 }
 
@@ -22,6 +24,11 @@ main {
   height: calc(100vh - 40px);
   background-color: var(--color-darksig);
   border-radius: 20px;
+}
+@media (max-width: 1319px) {
+  .nav {
+    display: none;
+  }
 }
 
 .logo {
@@ -70,7 +77,7 @@ main {
 }
 .board p {
   font-family: var(--font-robo);
-  font-size: 12px;
+  font-size: 0.75rem;
   text-align: center;
   color: var(--color-lightblue);
   padding-bottom: 10px;
@@ -79,10 +86,16 @@ main {
 
 .cont {
   overflow: hidden;
-  max-width: 2440px;
+  max-width: 2560px;
   width: 75%;
   margin: 20px 20px 20px 0px;
   border: 1px solid var(--color-sig);
   border-radius: 20px;
   box-sizing: border-box;
+}
+@media (max-width: 1319px) {
+  .cont {
+    width: 100%;
+    margin: 0px;
+  }
 }/*# sourceMappingURL=layout.css.map */

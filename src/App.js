@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter} from 'react-router-dom';
 
+import Header from './Header';
 import Nav from './Nav';
 import Cont from './Cont';
 
@@ -14,12 +15,12 @@ function App(props) {
   return (
     <>
       <BrowserRouter>
-          <header className='hidden'>&nbsp;</header>
-          <main>
-              <Nav />
-              <Cont />
-          </main>
-          <footer className='hidden'>&nbsp;</footer>
+        <Header />
+        <main>
+            <Nav />
+            <Cont />
+        </main>
+        <footer className='hidden'>&nbsp;</footer>
       </BrowserRouter>
     </>
   );

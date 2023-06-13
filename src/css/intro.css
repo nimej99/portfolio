@@ -5,6 +5,11 @@
   background-color: var(--intro-back);
   flex-direction: column;
 }
+@media (max-width: 1319px) {
+  .intro {
+    height: calc(100vh - 170px);
+  }
+}
 
 .intro_txt {
   text-align: center;
@@ -12,7 +17,7 @@
 }
 .intro_txt li {
   font-family: var(--font-robo);
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 50px;
   color: var(--color-white);
 }

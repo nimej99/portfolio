@@ -14,20 +14,22 @@ function Contact() {
 
   }, []);
 
+  const gWidth = 500;
+
   return (
     <article>
       <h2>
         Contact
       </h2>
       <ul className='cont_half flex'>
-        <li>
+        <li className='flex flex_center'>
           <Globe
             ref={globeEl}
             globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
             bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
             backgroundColor='#0F111D'
-            width='500'
-            height='500'
+            width={gWidth}
+            height={gWidth}
           />
         </li>
         <li>
