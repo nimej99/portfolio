@@ -247,6 +247,33 @@
   }
 }
 
+.s_logo {
+  padding: 20px;
+}
+
+.name {
+  margin-left: 20px;
+  font-size: 32px;
+  line-height: 90px;
+  color: var(--vs-y);
+}
+
+.s_gnb {
+  width: 100%;
+  justify-content: center;
+}
+.s_gnb li {
+  margin: 0 20px;
+}
+.s_gnb li a {
+  line-height: 90px;
+  font-size: 24px;
+  color: var(--vs-b);
+}
+.s_gnb li a.active {
+  color: var(--vs-r);
+}
+
 header {
   display: none;
   height: 90px;
@@ -258,7 +285,7 @@ header {
 }
 @media (max-width: 1319px) {
   header {
-    display: block;
+    display: flex;
   }
 }
 

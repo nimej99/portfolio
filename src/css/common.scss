@@ -287,6 +287,31 @@ $inter_min:10px;
   }
 }
 
+.s_logo{
+  padding:20px;
+}
+.name{
+  margin-left:20px;
+  font-size: 32px;
+  line-height: 90px;
+  color:var(--vs-y);
+}
+.s_gnb{
+  width:100%;
+  justify-content: center;
+  li{
+    margin:0 20px;
+    a{
+      line-height: 90px;
+      font-size: 24px;
+      color:var(--vs-b);
+    }
+    a.active{
+      color:var(--vs-r);
+    }
+  }
+}
+
 header{
   display: none;
   height:90px;
@@ -296,7 +321,7 @@ header{
   box-sizing: border-box;
   margin:10px 20px 0px;
   @include tablet{
-    display: block;
+    display: flex;
   }
 }
 
