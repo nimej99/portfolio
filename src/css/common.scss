@@ -360,6 +360,9 @@ $inter_min:10px;
       color:var(--vs-r);
     }
   }
+  li:active{
+    transform: translate(2px, 1px);
+  }
 }
 
 header{
@@ -404,7 +407,7 @@ article{
   background-color: var(--intro-back);
 }
 article::-webkit-scrollbar {
-  width: 8px;  /* 스크롤바의 너비 */
+  width: 1px;  /* 스크롤바의 너비 */
 }
 article::-webkit-scrollbar-thumb {
   height: 30%; /* 스크롤바의 길이 */

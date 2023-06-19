@@ -91,7 +91,7 @@ $res: 1540px;
       color:var(--color-white);
       font-family: var(--font-pixel);
       font-size: 1.25rem;
-      box-shadow: 0 0 0 1px var(--color-lightblue) inset;
+      border: 1px var(--color-lightblue) inset;
       background-color: var(--color-lightblack);
       flex-direction: column;
       @include res{
@@ -109,14 +109,14 @@ $res: 1540px;
       }
       @include b_mobile{
         font-size: 0.75rem;
-        box-shadow: 0 0 0 0.5px var(--color-lightblue) inset;
+        border: 0.5px var(--color-lightblue) inset;
       }
       @include b_mobile{
         font-size: 0.625rem;
       }
     }
     button.active{
-      box-shadow: 0 0 0 1px var(--vs-y) inset;
+      border: 1px var(--vs-y) inset;
     }
     button:active{
       transform: translate(2px, 1px);
@@ -182,7 +182,7 @@ $res: 1540px;
   }
   background-color: var(--color-lightblack);
   border-radius: 10px 0px 10px 0px;
-  box-shadow: 0 0 0 1px var(--color-lightblue) inset;
+  border: 1px var(--color-lightblue) inset;
 }
 .s_top{
   height:90px;
@@ -217,7 +217,7 @@ $res: 1540px;
       max-width:250px;
       width:100%;
       max-height:250px;
-      margin-bottom:10px;
+      margin-bottom:20px;
     }
   }
 }
@@ -252,6 +252,8 @@ $res: 1540px;
 .know_wrap,
 .like_wrap
 {
+  justify-content: space-around;
+  align-items: center;
   width:100%;
   margin-top:20px;
   @include mobile{
@@ -265,11 +267,13 @@ $res: 1540px;
   @include mobile{
     height:20px;
   }
+  @include mobile{
+    max-width:200px;
+  }
   border-radius: 5px;
-  box-shadow: 0 0 0 1px var(--color-lightblue) inset;
+  border: 1px var(--color-lightblue) inset;
 }
 .per_string{
-  margin-left:20px;
   font-family: var(--font-robo);
   font-size: 1.25rem;
   @include tablet{
@@ -333,6 +337,8 @@ $res: 1540px;
     aspect-ratio: 2.5 / 1;
     border-radius: 5px;
     font-size: 1.5rem;
+    font-family: var(--font-pixel);
+    text-decoration: none;
     @include res{
       font-size: 1.25rem;
     }
@@ -342,7 +348,6 @@ $res: 1540px;
     @include s_mobile{
       font-size: 0.875rem;
     }
-    font-family: var(--font-pixel);
   }
   button:first-child{
     background-color: var(--vs-b);

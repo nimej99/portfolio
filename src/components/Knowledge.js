@@ -9,7 +9,7 @@ function Knowledge(props) {
     backgroundColor:'#8892B0'
   }
   return (
-    <div className='know_wrap flex flex_center'>
+    <div className='know_wrap flex'>
       <div className='k_bar'>
         <div style={k_progress} className='k_move_bar'>&nbsp;</div>
       </div>

@@ -27,6 +27,12 @@
     right: -12%;
   }
 }
+@media (max-width: 489px) {
+  .backg{
+    top: -2%;
+    right: -12%;
+  }
+}
 .planet{
   height:200px;
   width:200px;

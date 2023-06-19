@@ -41,6 +41,9 @@ $nav:1650px;
   border-radius: 20px;
   background-color: var(--intro-back);
   flex-direction: column;
+  a{
+    text-decoration: none;
+  }
 }
 
 .intro_txt{

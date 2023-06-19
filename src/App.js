@@ -14,7 +14,7 @@ import './css/common.css';
 function App(props) {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename='/'>
         <Header />
         <main>
             <Nav />

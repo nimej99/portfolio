@@ -12,7 +12,7 @@ function Board() {
   }
 
   const { word } = useTypingText(
-    ["Front-End", "UI/UX", "Web/App"],
+    ["Front-End", "활기찬", "UI/UX", "Web/App",  "소통하는"],
     130,
     20
   );

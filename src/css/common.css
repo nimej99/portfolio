@@ -309,6 +309,9 @@
 .s_gnb li a.active {
   color: var(--vs-r);
 }
+.s_gnb li:active {
+  transform: translate(2px, 1px);
+}
 
 header {
   display: none;
@@ -363,7 +366,7 @@ article {
 }
 
 article::-webkit-scrollbar {
-  width: 8px; /* 스크롤바의 너비 */
+  width: 1px; /* 스크롤바의 너비 */
 }
 
 article::-webkit-scrollbar-thumb {

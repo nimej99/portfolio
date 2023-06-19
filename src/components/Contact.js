@@ -41,7 +41,7 @@ function Contact() {
               <p>방문해 주셔서 감사합니다.</p>
               <p>관심이 있으시거나, 궁금한 점이 있다면,</p>
             </li>
-            <li>
+            <li className='hi'>
               <Button title='Say Hello' />
             </li>
             <li>

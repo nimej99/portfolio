@@ -81,7 +81,7 @@ function Status(props) {
         선호도
         </p>
 
-        <div className='like_wrap flex flex_center'>
+        <div className='like_wrap flex'>
           <div className='k_bar'>
             <div style={l_progress} className='l_move_bar'>&nbsp;</div>
           </div>
