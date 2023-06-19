@@ -1,13 +1,13 @@
 .intro {
   position: relative;
-  height: 100%;
+  overflow: hidden;
   border-radius: 20px;
   background-color: var(--intro-back);
   flex-direction: column;
 }
 @media (max-width: 1319px) {
   .intro {
-    height: calc(100vh - 170px);
+    height: calc(100vh - 120px);
   }
 }
 
@@ -21,9 +21,26 @@
   line-height: 50px;
   color: var(--color-white);
 }
+@media (max-width: 1319px) {
+  .intro_txt li {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 638px) {
+  .intro_txt li {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 489px) {
+  .intro_txt li {
+    font-size: 1rem;
+    line-height: 30px;
+  }
+}
 
 .intro > a > .btn {
   position: absolute;
+  z-index: 9999;
   top: 60%;
   left: 50%;
   transform: translateX(-50%);
@@ -36,6 +53,13 @@
   top: -5px;
   left: 0;
   animation: star 2s infinite linear;
+}
+@media (max-width: 638px) {
+  .star {
+    width: 100px;
+    height: 100px;
+    top: 0;
+  }
 }
 
 @keyframes star {

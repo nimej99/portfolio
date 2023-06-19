@@ -14,7 +14,7 @@ function Contact() {
 
   }, []);
 
-  const gWidth = 500;
+  const gWidth = 650;
 
   return (
     <article>
@@ -22,7 +22,7 @@ function Contact() {
         Contact
       </h2>
       <ul className='cont_half flex'>
-        <li className='flex flex_center'>
+        <li className='earth flex flex_center'>
           <Globe
             ref={globeEl}
             globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
@@ -32,10 +32,10 @@ function Contact() {
             height={gWidth}
           />
         </li>
-        <li>
+        <li className='me'>
           <ul className='call_me flex'>
             <li>
-              <img src={process.env.PUBLIC_URL + '/images/photos/jamm.png'} alt="jamm" width='350' height='350' />
+              <img src={process.env.PUBLIC_URL + '/images/photos/jamm.png'} alt="jamm" />
             </li>
             <li className='thx'>
               <p>방문해 주셔서 감사합니다.</p>

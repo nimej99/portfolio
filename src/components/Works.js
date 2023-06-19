@@ -5,7 +5,7 @@ function Works(props) {
   return (
     <div className='works'>
       <div className='work'>
-        <img src={process.env.PUBLIC_URL + `/images/portfolio/${props.thumb}`} alt={props.title} width='1050' height='700' />
+        <img src={process.env.PUBLIC_URL + `/images/portfolio/${props.thumb}`} alt={props.title} />
         <ul className='work_desc'>
           <li>
             {props.title}

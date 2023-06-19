@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .none {
   max-width: 395px;
   width: 100%;
@@ -185,18 +186,15 @@
 }
 
 .b_text {
+  max-height: 214px;
+  height: 100%;
   padding: 50px 30px;
   box-sizing: border-box;
 }
 .b_text li {
   font-family: var(--font-D2);
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--color-white);
-}
-@media (max-width: 1650px) {
-  .b_text li {
-    font-size: 1rem;
-  }
 }
 .b_text li:nth-child(2) {
   color: var(--color-lightblue);
@@ -214,8 +212,10 @@
 }
 
 .b_icons {
+  max-height: 70px;
+  height: 100%;
+  padding: 0px 30px;
   align-items: center;
-  padding: 0px 30px 30px;
   box-sizing: border-box;
   gap: 20px;
 }
@@ -250,12 +250,28 @@
 .s_logo {
   padding: 20px;
 }
+@media (max-width: 495px) {
+  .s_logo {
+    padding: 20px 10px;
+  }
+}
 
 .name {
+  font-size: 1.5rem;
   margin-left: 20px;
-  font-size: 32px;
   line-height: 90px;
   color: var(--vs-y);
+}
+@media (max-width: 615px) {
+  .name {
+    margin-left: 10px;
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 495px) {
+  .name {
+    display: none;
+  }
 }
 
 .s_gnb {
@@ -265,10 +281,30 @@
 .s_gnb li {
   margin: 0 20px;
 }
+@media (max-width: 615px) {
+  .s_gnb li {
+    margin: 0 10px;
+  }
+}
 .s_gnb li a {
   line-height: 90px;
-  font-size: 24px;
+  font-size: 1.125rem;
   color: var(--vs-b);
+}
+@media (max-width: 615px) {
+  .s_gnb li a {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 355px) {
+  .s_gnb li a {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 326px) {
+  .s_gnb li a {
+    font-size: 0.625rem;
+  }
 }
 .s_gnb li a.active {
   color: var(--vs-r);
@@ -281,7 +317,7 @@ header {
   border: 1px solid var(--color-sig);
   border-radius: 20px;
   box-sizing: border-box;
-  margin: 10px 20px 0px;
+  margin: 10px 10px 0px;
 }
 @media (max-width: 1319px) {
   header {
@@ -295,17 +331,49 @@ h2 {
   padding: 50px;
   text-decoration: underline;
 }
+@media (max-width: 1319px) {
+  h2 {
+    font-size: 1.75rem;
+    padding: 30px;
+  }
+}
+@media (max-width: 615px) {
+  h2 {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+}
+@media (max-width: 495px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+}
 
 article {
   height: calc(100vh - 40px);
-  padding-bottom: 50px;
+  overflow-x: hidden;
+  overflow-y: scroll;
   border-radius: 20px;
   background-color: var(--intro-back);
 }
 @media (max-width: 1319px) {
   article {
-    height: calc(100vh - 170px);
+    height: calc(100vh - 120px);
   }
+}
+
+article::-webkit-scrollbar {
+  width: 8px; /* 스크롤바의 너비 */
+}
+
+article::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: var(--color-white); /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+
+article::-webkit-scrollbar-track {
+  background: none; /*스크롤바 뒷 배경 색상*/
 }
 
 .btn {

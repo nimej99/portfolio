@@ -1,4 +1,30 @@
 
+$nav:1650px;
+$tablet:1319px;
+$mobile:638px;
+$b_mobile:395px;
+
+@mixin nav{
+  @media (max-width: $nav){
+    @content;
+  }
+}
+@mixin tablet{
+  @media (max-width: $tablet){
+    @content;
+  }
+}
+@mixin mobile{
+  @media (max-width: $mobile){
+    @content;
+  }
+}
+@mixin b_mobile{
+  @media (max-width: $b_mobile){
+    @content;
+  }
+}
+
 $yellow :#FFD70E;
 $dark : #1E1E1E;
 
@@ -8,6 +34,24 @@ $dark : #1E1E1E;
   position:absolute;
   bottom: -9%;
   left: -9%;
+  @include nav{
+    left:-12%;
+  }
+  @include tablet{
+    bottom:-15%;
+  }
+  @include mobile{
+    width:300px;
+    height:300px;
+    left: -16%;
+    bottom: -10%;
+  }
+  @include b_mobile{
+    width:150px;
+    height:150px;
+    left: -6%;
+    bottom: -2%;
+  }
   border-radius:2px;
   overflow:hidden;
   

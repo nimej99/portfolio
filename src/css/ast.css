@@ -8,7 +8,25 @@
   border-radius:50%;
   background-color:rgba(0,0,0,0.1);
   transform:scale(0.7);
+}
+@media (max-width: 638px) {
+  .backg{
+    height:300px;
+    width:300px;
+    top: -5%;
+    right: -7%;
+    }
+  .planet{
+    width:150px;
+    height:150px;
   }
+}
+@media (max-width: 395px) {
+  .backg{
+    top: -6%;
+    right: -12%;
+  }
+}
 .planet{
   height:200px;
   width:200px;

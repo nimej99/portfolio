@@ -7,6 +7,32 @@
   border-radius: 2px;
   overflow: hidden;
 }
+@media (max-width: 1650px) {
+  .form {
+    left: -12%;
+  }
+}
+@media (max-width: 1319px) {
+  .form {
+    bottom: -15%;
+  }
+}
+@media (max-width: 638px) {
+  .form {
+    width: 300px;
+    height: 300px;
+    left: -16%;
+    bottom: -10%;
+  }
+}
+@media (max-width: 395px) {
+  .form {
+    width: 150px;
+    height: 150px;
+    left: -6%;
+    bottom: -2%;
+  }
+}
 .form .pac__man {
   width: 100px;
   height: 100px;
@@ -102,4 +128,4 @@
   to {
     transform: translate(-47px, -50%);
   }
-}/*# sourceMappingURL=Pack.css.map */
+}/*# sourceMappingURL=pack.css.map */

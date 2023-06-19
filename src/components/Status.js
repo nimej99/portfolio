@@ -69,7 +69,8 @@ function Status(props) {
       <strong className='s_top flex flex_center'>
         {props.status[props.myStat].title}
       </strong>
-      <div className='stat'>
+      <div className='stat flex flex_center'>
+        <img src={process.env.PUBLIC_URL + '/images/photos/404.png'} alt="char" className='m_char' />
         <strong className='knowledge'>
           <img src={process.env.PUBLIC_URL + '/images/retro/pencil.png'} alt="pencil" width='50' height='33' />
           이해도
@@ -80,7 +81,7 @@ function Status(props) {
         선호도
         </p>
 
-        <div className='like_wrap flex'>
+        <div className='like_wrap flex flex_center'>
           <div className='k_bar'>
             <div style={l_progress} className='l_move_bar'>&nbsp;</div>
           </div>
@@ -89,7 +90,7 @@ function Status(props) {
           </span>
         </div>
         
-        <div className='s_btns flex'>
+        <div className='s_btns flex flex_center'>
           <button onClick={loveUp}>
             <img src={process.env.PUBLIC_URL + '/images/retro/heart.png'} alt="heart" className={props.love === 100 ? 'hundred' : ''} />
             UP

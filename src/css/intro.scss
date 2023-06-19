@@ -2,6 +2,8 @@
 
 $tablet: 1319px;
 $desktop: 1320px;
+$mobile: 638px;
+$b_mobile: 489px;
 $nav:1650px;
 
 @mixin tablet{
@@ -14,6 +16,16 @@ $nav:1650px;
     @content;
   }
 }
+@mixin mobile{
+  @media (max-width: $mobile){
+    @content;
+  }
+}
+@mixin b_mobile{
+  @media (max-width: $b_mobile){
+    @content;
+  }
+}
 @mixin nav{
   @media (max-width: $nav){
     @content;
@@ -22,9 +34,9 @@ $nav:1650px;
 
 .intro{
   position: relative;
-  height:100%;
+  overflow: hidden;
   @include tablet{
-    height:calc(100vh - 170px);
+    height:calc(100vh - 120px);
   }
   border-radius: 20px;
   background-color: var(--intro-back);
@@ -37,6 +49,16 @@ $nav:1650px;
   li{
     font-family: var(--font-robo);
     font-size: 2.5rem;
+    @include tablet{
+      font-size: 2rem;
+    }
+    @include mobile{
+      font-size: 1.5rem;
+    }
+    @include b_mobile{
+      font-size: 1rem;
+      line-height: 30px;
+    }
     line-height: 50px;
     color:var(--color-white);
   }
@@ -44,6 +66,7 @@ $nav:1650px;
 
 .intro > a > .btn{
   position:absolute;
+  z-index: 9999;
   top:60%;
   left:50%;
   transform: translateX(-50%);
@@ -56,6 +79,11 @@ $nav:1650px;
   top:-5px;
   left:0;
   animation: star 2s infinite linear;
+  @include mobile{
+    width: 100px;
+    height: 100px;
+    top:0;
+  }
 }
 
 @keyframes star{

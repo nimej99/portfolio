@@ -2,7 +2,11 @@
 
 $tablet: 1319px;
 $desktop: 1320px;
-$nav:1650px;
+$m_header: 615px;
+$s_header: 495px;
+$ss_header: 355px;
+$sss_header: 326px;
+$article:1650px;
 
 @mixin tablet{
   @media (max-width: $tablet){
@@ -14,8 +18,28 @@ $nav:1650px;
     @content;
   }
 }
-@mixin nav{
-  @media (max-width: $nav){
+@mixin article{
+  @media (max-width: $article){
+    @content;
+  }
+}
+@mixin m_header{
+  @media (max-width: $m_header){
+    @content;
+  }
+}
+@mixin s_header{
+  @media (max-width: $s_header){
+    @content;
+  }
+}
+@mixin ss_header{
+  @media (max-width: $ss_header){
+    @content;
+  }
+}
+@mixin sss_header{
+  @media (max-width: $sss_header){
     @content;
   }
 }
@@ -35,7 +59,7 @@ $inter_min:10px;
   animation: flicker 3s infinite;
   li{
     font-size: 2.5rem;
-    @include nav{
+    @include article{
       font-size: 2rem;
       line-height: 32px;
     }
@@ -50,7 +74,7 @@ $inter_min:10px;
   }
   li:nth-child(2){
     font-size: 2.25rem;
-    @include nav{
+    @include article{
       font-size: 1.75rem;
     }
     text-indent: 20px;
@@ -201,7 +225,7 @@ $inter_min:10px;
   box-sizing: border-box;
   color:var(--vs-y);
   font-size: 2.5rem;
-  @include nav{
+  @include article{
     font-size: 2.25rem;
   }
   line-height: 50px;
@@ -215,7 +239,7 @@ $inter_min:10px;
   li{
     margin:15px 0px;
     font-size:2rem;
-    @include nav{
+    @include article{
       font-size: 1.75rem;
       line-height: 32px;
     }
@@ -234,21 +258,20 @@ $inter_min:10px;
 
 //내비게이션 보드영역 서식
 .b_text{
+  max-height:214px;
+  height:100%;
   padding:50px 30px;
   box-sizing: border-box;
   li{
     font-family: var(--font-D2);
-    font-size: 1.125rem;
-    @include nav{
-      font-size: 1rem;
-    }
+    font-size: 1rem;
     color:var(--color-white);
   }
   li:nth-child(2){
     color:var(--color-lightblue);
     margin:25px 0px;
     font-size: 1.75rem;
-    @include nav{
+    @include article{
       font-size: 1.5rem;
     }
   }
@@ -258,20 +281,22 @@ $inter_min:10px;
 }
 
 .b_icons{
+  max-height:70px;
+  height:100%;
+  padding:0px 30px;
   align-items: center;
-  padding: 0px 30px 30px;
   box-sizing: border-box;
   gap:20px;
   li{
     text-align: left;
     width:15%;
-    @include nav{
+    @include article{
       width:10%;
     }
     span{
       cursor: pointer;
       img{
-        @include nav{
+        @include article{
           width: 30px;
           height: 30px;
         }
@@ -281,7 +306,7 @@ $inter_min:10px;
   li:last-child{
     text-align:end;
     width:55%;
-    @include nav{
+    @include article{
       width: 70%;
     }
   }
@@ -289,10 +314,20 @@ $inter_min:10px;
 
 .s_logo{
   padding:20px;
+  @include s_header{
+    padding:20px 10px;
+  }
 }
 .name{
+  font-size: 1.5rem;
   margin-left:20px;
-  font-size: 32px;
+  @include m_header{
+    margin-left:10px;
+    font-size: 1.25rem;
+  }
+  @include s_header{
+    display: none;
+  }
   line-height: 90px;
   color:var(--vs-y);
 }
@@ -301,9 +336,24 @@ $inter_min:10px;
   justify-content: center;
   li{
     margin:0 20px;
+    @include m_header{
+      margin:0 10px;
+    }
+    // @include s_header{
+    //   margin:0 5px;
+    // }
     a{
       line-height: 90px;
-      font-size: 24px;
+      font-size: 1.125rem;
+      @include m_header{
+        font-size: 0.875rem;
+      }
+      @include ss_header{
+        font-size: 0.75rem;
+      }
+      @include sss_header{
+        font-size: 0.625rem;
+      }
       color:var(--vs-b);
     }
     a.active{
@@ -319,7 +369,7 @@ header{
   border:1px solid var(--color-sig);
   border-radius: 20px;
   box-sizing: border-box;
-  margin:10px 20px 0px;
+  margin:10px 10px 0px;
   @include tablet{
     display: flex;
   }
@@ -330,16 +380,39 @@ h2{
   font-size: 2rem;
   padding:50px;
   text-decoration: underline;
+  @include tablet{
+    font-size: 1.75rem;
+    padding:30px;
+  }
+  @include m_header(){
+    font-size: 1.5rem;
+    padding:20px;
+  }
+  @include s_header(){
+    font-size: 1.25rem;
+  }
 }
 
 article{
   height:calc(100vh - 40px);
+  overflow-x: hidden;
+  overflow-y: scroll;
   @include tablet{
-    height:calc(100vh - 170px);
+    height:calc(100vh - 120px);
   }
-  padding-bottom:50px;
   border-radius: 20px;
   background-color: var(--intro-back);
+}
+article::-webkit-scrollbar {
+  width: 8px;  /* 스크롤바의 너비 */
+}
+article::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: var(--color-white); /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+article::-webkit-scrollbar-track {
+  background: none;  /*스크롤바 뒷 배경 색상*/
 }
 
 // 버튼 공통서식

@@ -5,7 +5,7 @@ import Web from './Web';
 
 function Exp() {
   return (
-    <article>
+    <article className='exp'>
       <h2>
         Experience
       </h2>

@@ -1,8 +1,52 @@
 @charset "utf-8";
 
+$tablet: 1319px;
+$desktop: 1320px;
+$desc: 790px;
+$m_header: 615px;
+$mobile: 365px;
+$nav:1650px;
+
+@mixin tablet{
+  @media (max-width: $tablet){
+    @content;
+  }
+}
+@mixin desktop{
+  @media (min-width: $desktop){
+    @content;
+  }
+}
+@mixin nav{
+  @media (max-width: $nav){
+    @content;
+  }
+}
+@mixin desc{
+  @media (max-width: $desc){
+    @content;
+  }
+}
+@mixin m_header{
+  @media (max-width: $m_header){
+    @content;
+  }
+}
+@mixin mobile{
+  @media (max-width: $mobile){
+    @content;
+  }
+}
+
 .web{
   max-width:100%;
   margin:0px 50px;
+  @include tablet{
+    margin:0px 20px 20px;
+  }
+  @include m_header(){
+    margin:0px 15px;
+  }
   background-color: var(--port-back);
   .swiper-button-next, .swiper-button-prev{
     color:var(--color-lightblack);
@@ -14,26 +58,56 @@
   background-color: var(--color-lightblack);
   padding:0px 20px;
   justify-content: space-between;
+  gap:20px;
   li{
     img{
       margin-right:20px;
+      max-width:40px;
+      max-height:40px;
+      @include tablet{
+        max-width:30px;
+        max-height:30px;
+        width:100%;
+      }
+      @include m_header{
+        max-width:20px;
+        max-height:20px;
+      }
     }
     line-height: 50px;
     color:var(--color-white);
-    font-size: 1.5rem;
+    white-space: nowrap;
+    font-size: 1.25rem;
+    @include m_header{
+      font-size: 1rem;
+    }
+    @include mobile{
+      font-size: 0.875rem;
+    }
   }
 }
 .works{
   max-width:100%;
-  padding:10px;
+  max-height:100%;
+  padding:30px;
+  @include desc{
+    padding:20px;
+  }
+  @include m_header{
+    padding:10px;
+  }
 }
 .work{
+  margin:0 auto;
+  max-width:1050px;
+  width:100%;
+  aspect-ratio: 1.5 / 1 ;
+  max-height:700px;
   position: relative;
   border-radius: 20px;
-  overflow: hidden;
   img{
     width:100%;
-    object-fit: cover;
+    height:100%;
   }
   .btn{
     position: absolute;
@@ -42,6 +116,17 @@
     background: none;
     border:1px solid var(--color-white);
     color:var(--color-white);
+    @include m_header{
+      max-width:100px;
+      max-height:27px;
+      right:4%;
+      bottom:10px;
+      font-size: 0.625rem;
+    }
+    @include mobile{
+      max-width:90px;
+      max-height:24px;
+    }
   }
   .btn:hover{
     background-color: var(--color-white);
@@ -52,7 +137,7 @@
 
 .work_desc{
   width:100%;
-  height:200px;
+  height:35%;
   box-sizing: border-box;
   padding:50px;
   color:var(--color-white);
@@ -61,14 +146,59 @@
   position: absolute;
   left:0;
   bottom:0;
+  @include desc{
+    height:35%;
+    padding:20px;
+  }
+  @include m_header{
+    height:45%;
+    padding:16px;
+  }
+  @include mobile{
+    padding:10px;
+  }
   li{
     font-size: 1rem;
+    @include tablet{
+      font-size: 0.875rem;
+    }
+    @include m_header(){
+      width:50%;
+      display: inline-block;
+      font-size: 0.75rem;
+    }
+    @include mobile{
+      font-size: 0.625rem;
+    }
   }
   li:first-child{
     font-size: 1.5rem;
     margin-bottom:24px;
+    @include tablet{
+      font-size: 1rem;
+    }
+    @include m_header(){
+      font-size: 0.875rem;
+      margin-bottom:8px;
+    }
+    @include mobile{
+      font-size: 0.75rem;
+    }
   }
   li:nth-child(2){
     margin-bottom:12px;
+    @include m_header(){
+      margin-bottom:8px;
+      text-align: end;
+    }
+  }
+  li:last-child{
+    @include m_header{
+      width:50%;
+      font-size: 0.75rem;
+    }
+    @include mobile{
+      font-size: 0.625rem;
+    }
   }
 }

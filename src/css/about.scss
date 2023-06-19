@@ -2,6 +2,10 @@
 
 $tablet: 1319px;
 $desktop: 1320px;
+$mobile: 779px;
+$b_mobile:602px;
+$s_mobile:395px;
+$res: 1540px;
 
 @mixin tablet{
   @media (max-width: $tablet){
@@ -13,34 +17,103 @@ $desktop: 1320px;
     @content;
   }
 }
-.about{
-  height:calc(100vh - 70px);
-  @include tablet{
-    height:calc(100vh - 170px);
+@mixin res{
+  @media (max-width: $res){
+    @content;
   }
 }
+@mixin mobile{
+  @media (max-width: $mobile){
+    @content;
+  }
+}
+@mixin b_mobile{
+  @media (max-width: $b_mobile){
+    @content;
+  }
+}
+@mixin s_mobile{
+  @media (max-width: $s_mobile){
+    @content;
+  }
+}
+// .about{
+//   height:100%;
+// }
 
 .about_wrap{
-  margin:0px 0px 0px 50px;
+  margin:0px 20px;
+  display: flex;
   justify-content: space-evenly;
+  @include res{
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @include mobile{
+    margin:0px 15px;
+  }
 }
 
 .skills{
   max-width:200px;
   width:100%;
   flex-direction: column;
+  @include res{
+    max-width:100%;
+    flex-direction:row;
+    justify-content: center;
+    gap:10px;
+    margin-bottom:30px;
+  }
+  @include mobile{
+    margin-bottom:20px;
+    gap:5px;
+  }
+  @include s_mobile{
+    gap:0px;
+  }
   li{
+    max-width:200px;
+    width:100%;
+    @include tablet{
+      max-width:150px;
+    }
     button{
-      width:200px;
-      height:100px;
+      max-width:200px;
+      min-width:100px;
+      width:100%;
+      max-height:100px;
+      min-height:50px;
+      height:100%;
+      aspect-ratio: 2 / 1;
       margin:10px 0px;
       border-radius: 10px 0px 10px 0px;
       color:var(--color-white);
       font-family: var(--font-pixel);
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       box-shadow: 0 0 0 1px var(--color-lightblue) inset;
       background-color: var(--color-lightblack);
       flex-direction: column;
+      @include res{
+        margin:0;
+      }
+      @include tablet{
+        max-width:150px;
+        max-height:75px;
+        font-size: 1rem;
+      }
+      @include mobile{
+        font-size: 0.875rem;
+        min-width:50px;
+        min-height:25px;
+      }
+      @include b_mobile{
+        font-size: 0.75rem;
+        box-shadow: 0 0 0 0.5px var(--color-lightblue) inset;
+      }
+      @include b_mobile{
+        font-size: 0.625rem;
+      }
     }
     button.active{
       box-shadow: 0 0 0 1px var(--vs-y) inset;
@@ -54,21 +127,59 @@ $desktop: 1320px;
 // skills 토끼 영역
 .a_h3{
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color:var(--color-white);
   margin-bottom:50px;
+  @include res{
+    line-height: 90px;
+    margin-bottom:0px;
+    font-size: 1.75rem;
+  }
+  @include tablet{
+    font-size: 1.5rem;
+  }
 }
 
 .char{
-  margin:0px 50px 0px 100px;
+  padding:0px 20px;
   max-height:490px;
+  @include res{
+    max-width:44%;
+    padding:0px 10px;
+  }
+  @include mobile{
+    display: none;
+  }
+  img{
+    max-width:400px;
+    min-width:300px;
+    width:100%;
+    max-height:400px;
+    min-height:300px;
+    object-fit: cover;
+  }
 }
 
 // 스테이터스 영역
 .status{
-  max-width:414px;
+  max-width:400px;
+  min-width:350px;
   width:100%;
+  @include res{
+    max-width:44%;
+    width:100%;
+  }
+  @include tablet{
+    max-width:36%;
+    width:100%;
+  }
   max-height:490px;
+  @include mobile{
+    max-height: 100%;
+  }
+  @include s_mobile{
+    min-width:100%;
+  }
   background-color: var(--color-lightblack);
   border-radius: 10px 0px 10px 0px;
   box-shadow: 0 0 0 1px var(--color-lightblue) inset;
@@ -77,11 +188,38 @@ $desktop: 1320px;
   height:90px;
   border-bottom:1px solid var(--color-lightblue);
   box-sizing: border-box;
-  font-size: 2rem;
+  font-size: 1.875rem;
+  @include res{
+    font-size: 1.75rem;
+  }
+  @include tablet(){
+    font-size: 1.25rem;
+  }
+  @include mobile{
+    height:50px;
+  }
+  @include s_mobile{
+    font-size: 1rem;
+  }
   color:var(--color-white);
 }
 .stat{
-  margin:50px 20px;
+  margin-top:50px;
+  @include mobile{
+    margin-top:20px;
+  }
+  padding:0px 20px;
+  flex-direction: column;
+  .m_char{
+    display: none;
+    @include mobile{
+      display: block;
+      max-width:250px;
+      width:100%;
+      max-height:250px;
+      margin-bottom:10px;
+    }
+  }
 }
 .knowledge{
   display:block;
@@ -89,49 +227,121 @@ $desktop: 1320px;
   position: relative;
   font-family: var(--font-kor);
   font-size: 1.5rem;
+  @include res{
+    font-size: 1.25rem;
+  }
+  @include tablet{
+    font-size: 1.125rem;
+  }
+  @include mobile{
+    font-size: 1rem;
+  }
+  @include s_mobile{
+    font-size: 0.875rem;
+  }
   color:var(--color-white);
   img{
     position: absolute;
-    left:120px;
-    top:-4px;
+    left:-44px;
+    top:-6px;
+    @include mobile{
+      top:-10px;
+    }
   }
 }
 .know_wrap,
 .like_wrap
 {
+  width:100%;
   margin-top:20px;
-  margin-left:30px;
-  align-items:center;
+  @include mobile{
+    margin-top:10px;
+  }
 }
 .k_bar{
-  width:250px;
+  max-width:250px;
+  width:100%;
   height:30px;
+  @include mobile{
+    height:20px;
+  }
   border-radius: 5px;
   box-shadow: 0 0 0 1px var(--color-lightblue) inset;
 }
 .per_string{
   margin-left:20px;
   font-family: var(--font-robo);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  @include tablet{
+    font-size: 1.125rem;
+  }
+  @include mobile{
+    font-size: 1rem;
+  }
+  @include s_mobile{
+    font-size: 0.875rem;
+  }
   line-height: 30px;
   color:var(--color-white);
 }
 .like{
   margin-top:20px;
+  @include mobile{
+    margin-top:10px;
+  }
   font-family: var(--font-kor);
   color: var(--color-white);
   font-size: 1.5rem;
+  @include res{
+    font-size: 1.25rem;
+  }
+  @include tablet{
+    font-size: 1.125rem;
+  }
+  @include mobile{
+    font-size: 1rem;
+  }
+  @include s_mobile{
+    font-size: 0.875rem;
+  }
   text-align: center;
-  transform: translateX(-10px);
+  position: relative;
+  img{
+    position: absolute;
+    top:3px;
+    left:-30px;
+    @include mobile{
+      top:-2px;
+    }
+  }
 }
 .s_btns{
-  margin:50px 30px;
-  justify-content: space-between;
+  width:100%;
+  height:100%;
+  margin:50px 0;
+  @include mobile{
+    margin:20px 0;
+  }
+  gap:10px;
   button{
-    width:150px;
-    height:60px;
+    max-width:150px;
+    min-width: 100px;
+    max-height:60px;
+    min-height:40px;
+    width:100%;
+    height:100%;
+    aspect-ratio: 2.5 / 1;
     border-radius: 5px;
     font-size: 1.5rem;
+    @include res{
+      font-size: 1.25rem;
+    }
+    @include tablet{
+      font-size: 1.125rem;
+    }
+    @include s_mobile{
+      font-size: 0.875rem;
+    }
     font-family: var(--font-pixel);
   }
   button:first-child{
@@ -142,6 +352,9 @@ $desktop: 1320px;
       top:50%;
       left:12px;
       transform: translateY(-50%);
+      @include s_mobile{
+        left:8px;
+      }
     }
   }
   button:nth-child(2){
@@ -152,20 +365,32 @@ $desktop: 1320px;
   }
 }
 
-.about{
-  .a_eng{
-    margin:40px 0px 30px;
-    font-size: 0.75rem;
-    color:var(--color-lightblue);
-    text-align: center;
+.a_eng{
+  margin:40px 0px 30px;
+  font-size: 0.75rem;
+  @include mobile{
+    font-size: 0.625rem;
   }
-  .a_kor{
-    display: block;
-    color:var(--color-white);
-    font-size:1.875rem;
-    font-family: var(--font-kor);
-    text-align: center;
+  color:var(--color-lightblue);
+  text-align: center;
+}
+.a_kor{
+  display: block;
+  color:var(--color-white);
+  font-size:1.875rem;
+  padding-bottom:50px;
+  @include res{
+    font-size: 1.5rem;
   }
+  @include mobile{
+    font-size: 1.125rem;
+  }
+  @include s_mobile{
+    font-size: 1rem;
+    margin:0px 15px;
+  }
+  font-family: var(--font-kor);
+  text-align: center;
 }
 
 .hundred{

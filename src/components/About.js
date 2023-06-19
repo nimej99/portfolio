@@ -74,11 +74,11 @@ function About() {
       <h2>
         About
       </h2>
-      <div className='about_wrap flex'>
+      <div className='about_wrap'>
         <Skills status={status} myStat={myStat} setMyStat={setMyStat} />
         <div className='char'>
           <h3 className='a_h3'>SKILLS</h3>
-          <img src={process.env.PUBLIC_URL + '/images/photos/404.png'} alt="char" width='400' height='400' />
+          <img src={process.env.PUBLIC_URL + '/images/photos/404.png'} alt="char" />
         </div>
         <Status status={status} myStat={myStat} love={love} setLove={setLove} />
       </div>

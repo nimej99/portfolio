@@ -2,14 +2,19 @@
 
 $tablet: 1319px;
 $desktop: 1320px;
+$nav:1650px;
 
 @mixin tablet{
   @media (max-width: $tablet){
     @content;
   }
-}
-@mixin desktop{
+}@mixin desktop{
   @media (min-width: $desktop){
+    @content;
+  }
+}
+@mixin nav{
+  @media (max-width: $nav){
     @content;
   }
 }
@@ -24,10 +29,9 @@ body{
 
 main{
   display: flex;
-  height:100vh;
   @include tablet{
+    margin:10px;
     flex-direction: column;
-    padding:10px 20px 20px;
   }
 }
 // 내비게이션 서식
@@ -40,12 +44,25 @@ main{
   max-width: 600px;
   min-width: 400px;
   width:25%;
-  height:calc(100vh - 40px);
   background-color: var(--color-darksig);
+  border: 1px var(--color-sig) inset;
   border-radius: $inter_avg;
+  height:calc(100vh - 40px);
+  overflow-y: scroll;
   @include tablet{
     display: none;
   }
+}
+nav::-webkit-scrollbar {
+  width: 8px;  /* 스크롤바의 너비 */
+}
+nav::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: var(--color-white); /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+nav::-webkit-scrollbar-track {
+  background: none;  /*스크롤바 뒷 배경 색상*/
 }
 
 @mixin nav_back{
@@ -99,7 +116,7 @@ main{
     font-size: 0.75rem;
     text-align: center;
     color:var(--color-lightblue);
-    padding-bottom:$inter_min;
+    padding:$inter_min;
     box-sizing: border-box;
   }
 }
@@ -110,9 +127,9 @@ main{
   max-width:2560px;
   width:75%;
   margin:$inter_avg $inter_avg $inter_avg 0px;
+  box-sizing: border-box;
   border: 1px solid var(--color-sig);
   border-radius: $inter_avg;
-  box-sizing: border-box;
   @include tablet{
     width:100%;
     margin:0px;
