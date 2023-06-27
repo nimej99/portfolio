@@ -17,7 +17,9 @@ function Works(props) {
             {props.desc}
           </li>
         </ul>
-        <Button title={'자세히보기'} />
+        <span onClick={()=>{window.open(props.href)}} className='btn flex flex_center'>
+          자세히보기
+        </span>
       </div>
     </div>
   );
