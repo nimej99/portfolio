@@ -25,12 +25,12 @@
     bottom: -10%;
   }
 }
-@media (max-width: 395px) {
+@media (max-width: 430px) {
   .form {
     width: 150px;
     height: 150px;
-    left: -6%;
-    bottom: -2%;
+    left: -8%;
+    bottom: -4%;
   }
 }
 .form .pac__man {
@@ -45,6 +45,12 @@
   overflow: hidden;
   border: none;
   outline: none;
+}
+@media (max-width: 430px) {
+  .form .pac__man {
+    width: 80px;
+    height: 80px;
+  }
 }
 .form .pac__man .mouth, .form .pac__man .mouth2 {
   width: 50%;
@@ -88,6 +94,11 @@
   transform: translate(0, -50%);
   display: flex;
   animation: food 0.4s infinite linear;
+}
+@media (max-width: 430px) {
+  .form .food {
+    left: 60%;
+  }
 }
 .form .food .dot {
   width: 12px;

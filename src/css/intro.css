@@ -2,7 +2,6 @@
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  background-color: var(--intro-back);
   flex-direction: column;
 }
 @media (max-width: 1319px) {

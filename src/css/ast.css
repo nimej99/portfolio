@@ -29,8 +29,18 @@
 }
 @media (max-width: 489px) {
   .backg{
-    top: -2%;
+    top: -6%;
     right: -12%;
+  }
+}
+@media (max-width: 430px) {
+  .backg{
+    scale: 0.6;
+    top: -11%;
+    right: -21%;
+  }
+  .astro{
+    scale: 0.7;
   }
 }
 .planet{

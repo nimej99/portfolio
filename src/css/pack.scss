@@ -2,6 +2,7 @@
 $nav:1650px;
 $tablet:1319px;
 $mobile:638px;
+$imax:430px;
 $b_mobile:395px;
 
 @mixin nav{
@@ -16,6 +17,11 @@ $b_mobile:395px;
 }
 @mixin mobile{
   @media (max-width: $mobile){
+    @content;
+  }
+}
+@mixin imax{
+  @media (max-width: $imax){
     @content;
   }
 }
@@ -46,11 +52,11 @@ $dark : #1E1E1E;
     left: -16%;
     bottom: -10%;
   }
-  @include b_mobile{
+  @include imax{
     width:150px;
     height:150px;
-    left: -6%;
-    bottom: -2%;
+    left: -8%;
+    bottom: -4%;
   }
   border-radius:2px;
   overflow:hidden;
@@ -58,6 +64,10 @@ $dark : #1E1E1E;
   .pac__man{
     width:100px;
     height:100px;
+    @include imax{
+      width:80px;
+      height:80px;
+    }
     border-radius:50%;
     background:transparent;
     position:relative;
@@ -114,6 +124,9 @@ $dark : #1E1E1E;
   .food {
 	position: absolute;
 	left: 50%;
+  @include imax{
+    left: 60%;
+  }
 	top: 50%;
 	transform: translate(0,-50%);
 	display: flex;

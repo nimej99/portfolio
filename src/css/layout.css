@@ -80,6 +80,7 @@ nav::-webkit-scrollbar-track {
   padding-bottom: 45%;
   transition: 0.5s;
   background-size: contain;
+  cursor: pointer;
 }
 
 .board {

@@ -19,10 +19,10 @@
     scale: 0.5;
   }
 }
-@media (max-width: 395px) {
+@media (max-width: 430px) {
   .kurby{
-    right: -19%;
-    bottom: -8%;
+    right: -17%;
+    bottom: -10%;
     scale: 0.5;
   }
 }

@@ -78,7 +78,14 @@ function About() {
         <Skills status={status} myStat={myStat} setMyStat={setMyStat} />
         <div className='char'>
           <h3 className='a_h3'>SKILLS</h3>
-          <img src={process.env.PUBLIC_URL + '/images/photos/404.png'} alt="char" />
+          <div className='per_wrap'>
+            <div className='per_card'>
+              <img src={process.env.PUBLIC_URL + '/images/photos/404.png'} alt="char" className='per_com per_front' />
+              <p className='per_com per_back'>
+                "협업을 좋아하고 소통하는 <br /> 프론트엔드 개발자가 되기 위해 <br /> 다양한 언어를 습득하고 있습니다!
+              </p>
+            </div>
+          </div>
         </div>
         <Status status={status} myStat={myStat} love={love} setLove={setLove} />
       </div>

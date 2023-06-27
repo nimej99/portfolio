@@ -12,9 +12,14 @@ import IntroTxt from './IntroTxt';
 
 
 function Intro() {
+
+  const style = {
+    cursor: `url(${process.env.PUBLIC_URL}/images/retro/irocket.png), pointer`
+  }
+
   return (
     <>
-      <article className='intro flex flex_center'>
+      <article className='intro flex flex_center' style={style}>
         <Back />
         <Ast />
         <IntroTxt />

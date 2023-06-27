@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import confetti from 'canvas-confetti';
 
 import Knowledge from './Knowledge';
@@ -64,13 +64,25 @@ function Status(props) {
     }
   }
 
+  const [mPer, setMPer] = useState(0);
+  const perChange = () => {
+    mPer === 0 ? setMPer(1) : setMPer(0);
+  }
+
   return (
     <div className='status'>
       <strong className='s_top flex flex_center'>
         {props.status[props.myStat].title}
       </strong>
       <div className='stat flex flex_center'>
-        <img src={process.env.PUBLIC_URL + '/images/photos/404.png'} alt="char" className='m_char' />
+        <div className='per_wrap' onClick={perChange}>
+          <div className={mPer === 0 ? 'per_card' : 'per_card back'}>
+            <img src={process.env.PUBLIC_URL + '/images/photos/404.png'} alt="char" className='per_com per_front' />
+            <p className='per_com per_back'>
+              "협업을 좋아하고 소통하는 <br /> 프론트엔드 개발자가 되기 위해 <br /> 다양한 언어를 습득하고 있습니다!
+            </p>
+          </div>
+        </div>
         <strong className='knowledge'>
           <img src={process.env.PUBLIC_URL + '/images/retro/pencil.png'} alt="pencil" width='50' height='33' />
           이해도

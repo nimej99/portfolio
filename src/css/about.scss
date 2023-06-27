@@ -94,6 +94,7 @@ $res: 1540px;
       border: 1px var(--color-lightblue) inset;
       background-color: var(--color-lightblack);
       flex-direction: column;
+      cursor: pointer;
       @include res{
         margin:0;
       }
@@ -121,6 +122,9 @@ $res: 1540px;
     button:active{
       transform: translate(2px, 1px);
     }
+    button:hover{
+      color: var(--color-darksig);
+    }
   }
 }
 
@@ -142,6 +146,9 @@ $res: 1540px;
 
 .char{
   padding:0px 20px;
+  max-width:400px;
+  width:100%;
+  height:100%;
   max-height:490px;
   @include res{
     max-width:44%;
@@ -150,13 +157,67 @@ $res: 1540px;
   @include mobile{
     display: none;
   }
-  img{
+  .per_wrap:hover .per_card{
+    transform: rotateY(180deg);
+  }
+  .per_wrap{
     max-width:400px;
     min-width:300px;
     width:100%;
     max-height:400px;
     min-height:300px;
-    object-fit: cover;
+    height:100%;
+    aspect-ratio: 1/1;
+    position: relative;
+    perspective: 500px;
+    margin:0 auto;
+    cursor: pointer;
+    .per_card{
+      width:100%;
+      height:100%;
+      transition: all 0.7s;
+      transform-style: preserve-3d;
+      .per_com{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      .per_front{
+        z-index:2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .per_back{
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background-color: var(--color-lightblue);
+        transform: rotateY(180deg);
+        color:var(--color-white);
+        font-size:1.875rem;
+        line-height:2.25rem;
+        @include res{
+          font-size: 1.5rem;
+          line-height:1.75rem;
+        }
+        @include mobile{
+          font-size: 1.125rem;
+          line-height:1.25rem;
+        }
+        @include s_mobile{
+          font-size: 1rem;
+        }
+        font-family: var(--font-kor);
+      }
+    }
   }
 }
 
@@ -210,14 +271,70 @@ $res: 1540px;
   }
   padding:0px 20px;
   flex-direction: column;
-  .m_char{
+  .per_card.back{
+    transform: rotateY(180deg);
+  }
+  .per_wrap{
     display: none;
     @include mobile{
       display: block;
       max-width:250px;
       width:100%;
       max-height:250px;
+      height:100%;
+      aspect-ratio: 1/1;
+      position: relative;
+      perspective: 500px;
+      margin:0 auto;
       margin-bottom:20px;
+      cursor: pointer;
+
+      .per_card{
+        width:100%;
+        height:100%;
+        transition: all 0.7s;
+        transform-style: preserve-3d;
+        .per_com{
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+        }
+        .per_front{
+          z-index:2;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .per_back{
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          background-color: var(--color-lightblue);
+          transform: rotateY(180deg);
+          color:var(--color-white);
+          font-size:1.875rem;
+          line-height:2rem;
+          @include res{
+            font-size: 1.5rem;
+            line-height:1.75rem;
+          }
+          @include mobile{
+            font-size: 1.125rem;
+            line-height:1.25rem;
+          }
+          @include s_mobile{
+            font-size: 1rem;
+          }
+          font-family: var(--font-kor);
+        }
+      }
     }
   }
 }
@@ -339,6 +456,7 @@ $res: 1540px;
     font-size: 1.5rem;
     font-family: var(--font-pixel);
     text-decoration: none;
+    cursor: pointer;
     @include res{
       font-size: 1.25rem;
     }

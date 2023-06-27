@@ -357,7 +357,7 @@ article {
   overflow-x: hidden;
   overflow-y: scroll;
   border-radius: 20px;
-  background-color: var(--intro-back);
+  background-color: var(--cont-back);
 }
 @media (max-width: 1319px) {
   article {

@@ -206,13 +206,4 @@
   .work_desc li:last-child {
     font-size: 0.625rem;
   }
-}
-
-.e_txt {
-  display: block;
-  text-align: center;
-  color: var(--port-font);
-  font-size: 1.875rem;
-  font-family: var(--font-kor);
-  padding-bottom: 50px;
 }/*# sourceMappingURL=exp.css.map */

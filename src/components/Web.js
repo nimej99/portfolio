@@ -38,8 +38,12 @@ function Web() {
     }
   ]
 
+  const style = {
+    cursor: `url(${process.env.PUBLIC_URL}/images/retro/pointer.png), pointer`
+  }
+
   return (
-    <div className='web'>
+    <div className='web' style={style}>
       <ul className='w_intro flex'>
         <li className='flex flex_center'>
           <img src={process.env.PUBLIC_URL + '/images/retro/folder.svg'} alt="folder" width='40' height='40' />
