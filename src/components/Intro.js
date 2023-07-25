@@ -29,6 +29,10 @@ function Intro() {
         <Packman />
         <Kurby />
         <img src={process.env.PUBLIC_URL + '/images/retro/star.png'} alt="star" width='150' height='150' className='star' />
+        <p className='notice'>
+          본 사이트는 상업용 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다.
+            일부 내용 및 이미지의 저작권은 본인 소유가 아님을 밝힙니다.
+        </p>
       </article>
     </>
   );

@@ -102,4 +102,9 @@
 
 .hi button {
   text-decoration: none;
+}
+
+.scene-container div:last-of-type {
+  transform: translate(-50%, -50%);
+  overflow: visible !important;
 }/*# sourceMappingURL=contact.css.map */

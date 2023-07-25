@@ -7,7 +7,7 @@ import Button from './Button';
 function Board() {
   const url = {
     github : 'https://github.com/nimej99',
-    codepen : 'https://codepen.io/nimej99',
+    blog : 'https://velog.io/@nimej99',
     instagram : 'https://www.instagram.com/invites/contact/?i=1x6hm153b9t14&utm_content=o0u94i'
   }
 
@@ -41,8 +41,8 @@ function Board() {
             </span>
           </li>
           <li>
-            <span onClick={()=>{window.open(url.codepen)}}>
-              <img src={process.env.PUBLIC_URL + '/images/common/codepen.svg'} alt="codepen" />
+            <span onClick={()=>{window.open(url.blog)}}>
+              <img src={process.env.PUBLIC_URL + '/images/common/blog.svg'} alt="codepen" />
             </span>
           </li>
           <li>
@@ -51,7 +51,13 @@ function Board() {
             </span>
           </li>
           <li>
-            <Button title='Resume' />
+            <a 
+              href="/강재민_입사지원서.pdf"
+              download="강재민_입사지원서"
+              target="_blank"
+              rel="noreferrer">
+              <Button title='Resume' />
+            </a>
           </li>
         </ul>
         <p>

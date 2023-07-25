@@ -74,4 +74,18 @@
   100% {
     transform: translateY(0px);
   }
+}
+.notice {
+  position: absolute;
+  bottom: 20px;
+  padding: 0px 20px;
+  font-family: var(--font-D2);
+  font-size: 0.75rem;
+  color: var(--color-lightblue);
+  text-align: center;
+}
+@media (max-width: 638px) {
+  .notice {
+    font-size: 0.625rem;
+  }
 }/*# sourceMappingURL=intro.css.map */

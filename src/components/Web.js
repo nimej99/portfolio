@@ -17,28 +17,28 @@ function Web() {
   const Worked = [
     {
       thumb:'lush.png',
-      title:'RUSH RESPONSIVE WEB PROJECT',
+      title:'RUSH Responsive Web Project',
       term:'2022.12 ~ 2023.01',
       desc:'HTML CSS JavaScript',
       href:'http://jamm.dothome.co.kr/Lush/index.html'
     },
     {
       thumb:'hana.png',
-      title:'HANA WEB PROJECT',
+      title:'HANA Adaptive Web Project',
       term:'2023.02 ~ 2023.03',
       desc:'HTML CSS JavaScript PHP',
       href:'http://jamm.dothome.co.kr/하나금융그룹/index.html'
     },
     {
       thumb:'ofd_admin.png',
-      title:'OFD STUDIO ADMIN MOBILE WEB PROJECT',
+      title:'OFD STUDIO [ADMIN] Mobile Web Project',
       term:'2023.03 ~ 2023.04',
       desc:'HTML CSS JavaScript PHP',
       href:'http://jamm.dothome.co.kr/revolution/login.php'
     },
     {
       thumb:'ofd_user.png',
-      title:'OFD STUDIO USER MOBILE WEB PROJECT',
+      title:'OFD STUDIO [USER] Mobile Web Project',
       term:'2023.04 ~ 2024.05',
       desc:'HTML CSS JavaScript PHP React.js',
       href:'http://jamm.dothome.co.kr/revolution_user/index.html'

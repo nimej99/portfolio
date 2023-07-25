@@ -99,3 +99,16 @@ $nav:1650px;
     transform: translateY(0px);
   }
 }
+
+.notice{
+  position: absolute;
+  bottom:20px;
+  padding:0px 20px;
+  font-family: var(--font-D2);
+  font-size: 0.75rem;
+  @include mobile{
+    font-size: 0.625rem;
+  }
+  color:var(--color-lightblue);
+  text-align: center;
+}

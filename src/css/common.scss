@@ -286,29 +286,21 @@ $inter_min:10px;
   padding:0px 30px;
   align-items: center;
   box-sizing: border-box;
-  gap:20px;
+  gap:5px;
   li{
     text-align: left;
-    width:15%;
-    @include article{
-      width:10%;
-    }
+    width:10%;
     span{
       cursor: pointer;
       img{
-        @include article{
-          width: 30px;
-          height: 30px;
-        }
+        width: 30px;
+        height: 30px;
       }
     }
   }
   li:last-child{
     text-align:end;
-    width:55%;
-    @include article{
-      width: 70%;
-    }
+    width: 70%;
   }
 }
 
