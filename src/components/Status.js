@@ -4,7 +4,6 @@ import confetti from 'canvas-confetti';
 import Knowledge from './Knowledge';
 
 function Status(props) {
-  console.log(props.love);
   let l_per = props.love + '%';
   let l_progress = {
     width:l_per,

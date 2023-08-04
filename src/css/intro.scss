@@ -36,7 +36,7 @@ $nav:1650px;
   position: relative;
   overflow: hidden;
   @include tablet{
-    height:calc(100vh - 120px);
+    height:calc(100dvh - 120px);
   }
   border-radius: 20px;
   flex-direction: column;

@@ -15,7 +15,7 @@ function Cont() {
         <Routes>
           <Route path='/' element={<Intro />} />
           <Route path='/about' element={<About />} />
-          <Route path='/exp' element={<Exp />} />
+          <Route path='/experience' element={<Exp />} />
           <Route path='/contact' element={<Contact />} />
 
           <Route path="/*" element={<Redirect to="/"></Redirect>}></Route>

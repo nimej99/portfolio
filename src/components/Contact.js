@@ -37,7 +37,6 @@ function Contact() {
   }));
 
   //  채널톡
-  ChannelService.loadScript();
   ChannelService.boot({
     "pluginKey": "f039aab7-7152-400b-899a-a426a780a23e",
     "customLauncherSelector": ".hi",

@@ -341,7 +341,7 @@ h2 {
 }
 
 article {
-  height: calc(100vh - 40px);
+  height: calc(100dvh - 40px);
   overflow-x: hidden;
   overflow-y: scroll;
   border-radius: 20px;
@@ -349,7 +349,7 @@ article {
 }
 @media (max-width: 1319px) {
   article {
-    height: calc(100vh - 120px);
+    height: calc(100dvh - 120px);
   }
 }
 
@@ -375,6 +375,7 @@ article::-webkit-scrollbar-track {
   font-size: 1rem;
   box-shadow: 0 0 1px var(--color-sig) inset;
   border-radius: 10px;
+  color: var(--color-black);
   background-color: var(--color-darksig);
   box-sizing: border-box;
   cursor: pointer;

@@ -6,7 +6,7 @@
 }
 @media (max-width: 1319px) {
   .intro {
-    height: calc(100vh - 120px);
+    height: calc(100dvh - 120px);
   }
 }
 .intro a {

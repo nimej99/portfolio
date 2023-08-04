@@ -10,7 +10,7 @@
 }
 @media (max-width: 615px) {
   .web {
-    margin: 0px 15px;
+    margin: 0px 15px 20px;
   }
 }
 .web .swiper-button-next, .web .swiper-button-prev {

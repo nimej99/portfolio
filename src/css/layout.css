@@ -24,7 +24,7 @@ main {
   background-color: var(--color-darksig);
   border: 1px var(--color-sig) inset;
   border-radius: 20px;
-  height: calc(100vh - 40px);
+  height: calc(100dvh - 40px);
   overflow-y: scroll;
 }
 @media (max-width: 1319px) {

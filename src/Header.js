@@ -11,7 +11,7 @@ function Header(props) {
       setHeaderTab(0);
     } else if(location.pathname === '/about'){
       setHeaderTab(1);
-    } else if(location.pathname === '/exp'){
+    } else if(location.pathname === '/experience'){
       setHeaderTab(2);
     } else if(location.pathname === '/contact'){
       setHeaderTab(3);
@@ -36,7 +36,7 @@ function Header(props) {
           </Link>
         </li>
         <li>
-          <Link to='/exp' className={headerTab === 2 ? active : ''} onClick={() => setHeaderTab(2)}>
+          <Link to='/experience' className={headerTab === 2 ? active : ''} onClick={() => setHeaderTab(2)}>
             EXPERIENCE
           </Link>
         </li>

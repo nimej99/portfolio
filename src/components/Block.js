@@ -11,7 +11,7 @@ function Block() {
       setGnbTab(0);
     } else if(location.pathname === '/about'){
       setGnbTab(1);
-    } else if(location.pathname === '/exp'){
+    } else if(location.pathname === '/experience'){
       setGnbTab(2);
     } else if(location.pathname === '/contact'){
       setGnbTab(3);
@@ -35,7 +35,7 @@ function Block() {
           </Link>
         </li>
         <li>
-          <Link to='/exp' className={gnbTab === 2 ? active : ''} onClick={() => setGnbTab(2)}>
+          <Link to='/experience' className={gnbTab === 2 ? active : ''} onClick={() => setGnbTab(2)}>
             EXPERIENCE
           </Link>
         </li>
